@@ -1,0 +1,38 @@
+.counter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* margin-left: 10px; */
+  }
+
+
+.minuss {
+    color: white;
+    border: 1px solid white;
+    background: none;
+  }
+
+  .minuss.disabled {
+    background: none ;
+  }
+
+
+  .sell_tickets_warp{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sell_tickets_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.sell_ticket_btns{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+

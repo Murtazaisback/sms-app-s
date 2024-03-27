@@ -1,0 +1,86 @@
+.Sms_sign{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* gap: 20px; */
+    justify-content: space-between;
+    margin: 100px 0;
+}
+.Sms_sign_right{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 4px 4px 0 #636363, inset -2px -2px 4px 0 #636363;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 47%;
+    height: 500px; 
+}
+.sms_p_box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Sms_sign_left{
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 4px 4px 0 #636363, inset -2px -2px 4px 0 #636363;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 47%;
+    height: 500px;
+}
+.Sms_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.Sms_inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 45px;
+}
+.Sms_input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.Sms_input input{
+    width: 100%;
+    padding: 7px;
+    border-radius: 15px;
+    outline: none !important;
+    border: none;
+}
+.check_sms{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+    .Sms_sign{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .Sms_sign_right, .Sms_sign_left{
+        width: 100%;
+        height: 100%;
+    }
+    .Sms_inputs{
+        flex-direction: column;
+    }
+}

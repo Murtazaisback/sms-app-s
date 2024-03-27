@@ -1,0 +1,810 @@
+.SMS_Dashboard_warp {
+    width: 100%;
+}
+
+.SMS_Dashboard_box {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.sms_area_bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.SMS_Dashboard_box_one{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+
+}
+.sms_area_left{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sms_area_top {
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sms_Credits_box {
+    width: 100%;
+    border-radius: 15px;
+    background: #212121;
+    box-shadow: 2px 4px 4px 0px #63636367 inset, -2px -2px 4px 0px #63636367 inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 14px;
+}
+
+.progressBar_warp {
+    width: 100%;
+    position: relative;
+}
+
+.progressOutline {
+    width: 100%;
+    height: 20px;
+    border: 1.65px solid #000;
+    border-radius: 25px;
+}
+
+.progress {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    height: 15px;
+    width: 20%;
+    border-radius: 25px;
+    background: #FAE100;
+}
+
+.sms_bold {
+    color: var(--sms_colors);
+    font-weight: 600;
+}
+
+.sms_button {
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    background: #3A3A3A;
+    color: white;
+    font-weight: 500;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.Sms_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: 10px; */
+    flex-wrap: wrap;
+}
+
+.sms_button_outline {
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    background: var(--sms_colors);
+    color: black;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: all ease-in-out 0.3s;
+}
+.sms_button_outline:hover{
+    background: transparent;
+    outline: 1px solid var(--sms_colors);
+    color: white;
+}
+
+.sms_area_right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Subscriber_Stats {
+    border-radius: 15px;
+    background: #212121;
+    box-shadow: -2px -2px 4px 0px #63636367 inset, 2px 2px 4px 0px #63636367 inset;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.stats_time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purple_bg {
+    background: #AF6060;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.yellowBg {
+    background: #FAE100;
+    padding: 10px;
+    border-radius: 25px;
+    color: black;
+}
+
+.popup_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 1000;
+}
+
+.popup_content {
+    position: relative !important;
+    background: black;
+    padding: 27px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.399), inset 0px 0px 10px rgba(255, 255, 255, 0.399);
+    width: 55%;
+    /* max-width: 80%; */
+    /* border: 1px solid #FAE100; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+    
+}
+.sms_pop_sm{
+    width: 35% !important;
+}
+
+.popup_content h2 {
+    color: transparent;
+    background-clip: text !important;
+    background: linear-gradient(90deg, rgba(190,158,68,1) 0%, rgba(216,198,144,1) 100%);
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sms_form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 25px;
+}
+
+.sms_select {
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.sms_input_box {
+    margin-left: 20px;
+}
+
+.sms_input_btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+
+.sms_ol li {
+    margin-left: 20px;
+}
+
+.sms_p {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.submit_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.submit_text button {
+    padding: 10px 20px;
+    background: var(--color-yellow2);
+    border: 2px solid transparent;
+    color: black;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+.submit_text button:hover{
+    border: 2px solid #cbb26a;
+    background: transparent;
+    color: white;
+}
+
+.sms_Credits_input {
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+
+.sms_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.sms_infos p{
+    font-size: 15px;
+}
+
+.sms_infos textarea {
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+    outline: none;
+}
+
+.sms_infos_btns {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.send_messages {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.area_right_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+    margin-bottom: 58px;
+}
+
+.prev_message {
+    border-radius: 15px;
+    background: #212121;
+    box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
+    /* margin-top: 58px; */
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prev_message_box {
+    width: 100%;
+    height: 325px;
+    padding: 5px;
+    background: white;
+}
+
+.prev_message_box input::placeholder {
+    color: white;
+}
+
+.prev_message_box input {
+    background: #C5C5C5;
+    color: #636363;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.sms_pay {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sms_keywords_warp {
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    background: #212121;
+    box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sms_keywords_table {
+    margin-top: 20px;
+}
+
+.sms_keywords_table thead {
+    width: 100%;
+
+}
+.sms_keywords_table thead tr {
+    width: 100%;
+}
+
+.sms_keywords_table thead tr th {
+    /* display: flex; */
+    width: 250px;
+    border-bottom: 1px solid #FAE100;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+}
+.sms_keywords_table tbody tr td{
+    padding-top: 10px;
+}
+.sms_keywords_table thead tr th:nth-child(1){
+    width: 20px ;
+}
+
+.My_Keywords_bt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.add_keyword_btn{
+    padding: 7px;
+    background: #FAE100;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+.sms_input_box_mt{
+    margin-left: 20px;
+    margin-top: 90px;
+}
+.popup_content2 {
+    padding: 20px;
+    border-radius: 15px;
+background: #212121;
+box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
+    width: 45%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+    text-align: center;
+}
+.popup_content2 input{
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+.popup_content2 button{
+    background: #FAE100;
+    color: black;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 5px 10px; 
+    cursor: pointer;
+}
+
+.pop-ps{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.popup-text textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+}
+.Contact_t_form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.label_sms_b{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.label_sms_b input, .label_sms_b select{
+    width: 200px;
+    border-radius: 25px;
+    outline: none;
+    
+    border: none;
+    padding: 5px 7px;
+}
+.sms_heading{
+    font-size: 19px;
+    font-weight: 500;
+}
+.bulk_ac{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 90%;
+    gap: 20px;
+}
+.bulk_ac select{
+    padding: 5px 9px;
+    font-size: 15px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+.bulk_ac label{
+    font-size: 13px;
+}
+.bulk_ac_btn{
+    background: var(--sms_colors);
+    font-size: 15px;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-weight: 500;
+    border-radius: 15px;
+}
+.select_opt{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.selection_header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.selection_header label, .selection_body label, .selection_body input{
+    width: 200px;
+    text-align: center;
+}
+.selection_body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.selection_body input{
+    background: transparent !important;
+}
+.flexed_info{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.contact_text_sms{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.close_popup{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 26px;
+    color: var(--color-lightyellow);
+    cursor: pointer;
+}
+.p_content{
+    margin-top: 10px;
+    text-align: center;
+}
+.pop_up_1_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.form_input_sms{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+.Message_sms_pop{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.inp_sms_pop{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inp_sms_pop input{
+    border-radius: 25px;
+    outline: none;
+    padding: 7px;
+}
+.inp_sms_check{
+    display: flex;
+    align-items: first baseline;
+    gap: 20px;
+}
+.pop_text_cent{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.temp_header{
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #FFC700;
+    padding-bottom: 10px;
+}
+.temp_body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.temp_select_row{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.sms_left_warp{
+    background: black;
+    box-shadow: -2px -2px 4px 0px #63636394 inset, 2px 2px 4px 0px #63636394 inset;
+    padding: 5px;
+    border-radius: 10px;
+}
+.sms_left_head{
+    text-align: center;
+    font-size: 17px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
+.inbox_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid var(--sms_colors);
+    border-top: 1px solid var(--sms_colors);
+    padding: 7px 0px;
+    margin-top: 20px;
+}
+.inbox_header p{
+    width: 150px;
+}
+.inbox_msgs{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.inbox_msg{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-bottom: 1px solid var(--sms_colors);
+    /* border-top: 1px solid var(--sms_colors); */
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+.centered_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.sms_area_inbox{
+    /* width: 35%; */
+    width: 49%;
+    display: flex;
+    background: black;
+    box-shadow: -2px -2px 4px 0px #63636394 inset, 2px 2px 4px 0px #63636394 inset;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.sms_left_righ{
+    width: 49%;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    background: black;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: -2px -2px 4px 0px #63636394 inset, 2px 2px 4px 0px #63636394 inset;
+    display: none;
+}
+.inbox_dm{
+    width: 100%;
+    height: 1px;
+    margin: 5px 0 ;
+    background: var(--sms_colors);
+}
+
+.first_dm{
+    background: var(--sms_colors);
+    padding: 10px;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 12px;
+    margin:0 auto ;
+    color: black;
+}
+.inbox_box_ms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.send_inp{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.send_inp input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.display-flex{
+    display: flex;
+}
+.display-none{
+    display: none;
+}
+.sms_area_warp{
+    display: flex;
+    gap: 20px;
+}
+.Responder{
+    width: 100%;
+}
+.prev_message_warp{
+    width: 450px;
+}
+.sms_area_bottom_warp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: black;
+    box-shadow: -2px -2px 4px 0px #63636394 inset, 2px 2px 4px 0px #63636394 inset;
+    border-radius: 10px;
+    padding: 20px;
+}
+.sms_right_btns{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+@media screen and (max-width: 860px) {
+    .sms_area_warp{
+        flex-direction: column;
+    }
+    .prev_message_warp{
+        width: 100%;
+    }
+    .sms_area_inbox{
+        width: 100%;
+        padding: 20px;
+    }
+    .sms_Credits_box{
+        width: 500px;
+    }
+    .label_sms_b input, .label_sms_b select{
+        font-size: 12px;
+        width: 200px;
+    }
+    .flexed_info{
+        flex-wrap: wrap;
+    }
+    .popup_content_info p{
+        font-size: 12px;
+    }
+    .popup_content{
+        width: 120% !important;
+        /* max-width: auto !important; */
+        padding: 12px;
+    }
+    .sms_button_outline{
+        padding: 5px;
+    }
+    .sms_area_bottom{
+        flex-wrap: wrap;
+    }
+    .SMS_Dashboard_box_one{
+        flex-wrap: wrap;
+    }
+    .SMS_Dashboard_box {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .sms_area_right{
+        width: 100%;
+    }
+    .yellowBg{
+        padding: 2px;
+    }
+    .Sms_btns{
+        gap: 20px;
+    }
+    .sms_button{
+        width: 100%;
+    }
+    .sms_area_left{
+        width: 100%;
+    }
+    .sms_button_outline{
+        width: 100%;
+    }
+    .prev_message{
+        width: 100%;
+    }
+    .sms_keywords_warp {
+        width: 500px;
+    }
+    .sms_keywords_table tbody tr td{
+        font-size: 12px;
+    }
+}
