@@ -91,7 +91,7 @@ const Header = () => {
                     <li><a href='/Pricing' className={addYellowCrrClass('/Pricing')}>Pricing</a></li>
                     <li><a href='/EventsPage' className={addYellowCrrClass('/EventsPage')}>EVENTS</a></li>
                     <li><a href='/Login' className={`login-button pc_none ${addYellowCrrClass('/Login')}`}>Login</a></li>
-                    <li><a href='/NewEvent' className={`li_active ${addYellowCrrClass('/NewEvent')}`}>CREATE EVENT</a></li>
+                    <li><a href='/SendMessage' className={`li_active ${addYellowCrrClass('/SendMessage')}`}>CREATE EVENT</a></li>
                 </ul>
             </div>
             <div className='dropdwon_custom_warp' style={{ display: "none" }}>
