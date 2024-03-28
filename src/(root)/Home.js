@@ -39,10 +39,7 @@ const Home = () => {
 
 
         <section className='main_header_section' >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          <div
             className="header_section"
           >
             <h1 >Event. Planning. <br /> Genius.</h1>
@@ -52,10 +49,7 @@ const Home = () => {
                 <div>
                   <a href="/Sign_Up" className="btn" >Sign Up</a>
                 </div>
-                <motion.div
-                  style={{
-                    animation: 'scale-up-tl 1s forwards',
-                  }}
+                <div
                   className='Hero_imgs pc_none'
                 >
                   <div className="wapper_Hero_imgs">
@@ -64,7 +58,7 @@ const Home = () => {
   
                     <img src={Ellispse} alt="" className='back_hero_img' style={{ transform: `rotate(${rotation}deg)` }} />
                   </div>
-                </motion.div>
+                </div>
   
                 <div className="header_text" >
                   <p className="yellow_cr">We’re the All-in-One Platform you’ve been waiting for.</p>
@@ -72,11 +66,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-          <motion.div
-            style={{
-              animation: 'scale-up-tl 1s forwards',
-            }}
+          </div>
+          <div
             className='Hero_imgs res_none'
           >
             <div className="wapper_Hero_imgs">
@@ -85,21 +76,14 @@ const Home = () => {
   
               <img src={Ellispse} alt="" className='back_hero_img' style={{ transform: `rotate(${rotation}deg)` }} />
             </div>
-          </motion.div>
+          </div>
   
   
         </section>
   
   
         <div className='main_container'>
-          <motion.div
-            ref={ref1}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: inView1 ? 1 : 0, scale: inView1 ? 1 : 0.5 }}
-            transition={{ duration: 0.5 }}
-            style={{
-              animation: inView1 ? 'none' : 'scaleUpLeft 0.5s forwards',
-            }}
+          <div
           >
   
             <div className={`service_cards_section`}>
@@ -107,7 +91,7 @@ const Home = () => {
               <h1>Do more. On One Platform</h1>
               <ServiceCards />
             </div>
-          </motion.div>
+          </div>
   
           <div className="show_section">
             <div className="mid_effect"></div>
@@ -118,11 +102,7 @@ const Home = () => {
   
   
   
-              <motion.div
-                ref={ref2}
-                initial={{ opacity: 0, x: 100 }}  // Starts off screen to the left
-                animate={{ opacity: inView2 ? 1 : 0, x: inView2 ? 0 : 100 }}  // Slide in when in view
-                transition={{ duration: 0.5 }}
+              <div
                 className='info_imagse_box'
               >
                 <div className="show_info" >
@@ -130,17 +110,10 @@ const Home = () => {
                   <p>Need reserved seating for <br />your event? Not a <br />problem.</p>
                   <p>Use our built-in designer to <br /> customize your seating chart and  <br /> allow customers to select their<br />seats at checkout</p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
-          <motion.div
-            ref={ref3}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: inView3 ? 1 : 0, scale: inView3 ? 1 : 0.5 }}
-            transition={{ duration: 0.1 }}
-            style={{
-              animation: inView3 ? 'none' : 'scaleUpLeft 0.25s forwards',
-            }}
+          <div
           >
   
             <div className="table_section">
@@ -194,8 +167,8 @@ const Home = () => {
                 </table>
               </div>
             </div>
-          </motion.div>
-          <motion.div className='about_main_box'>
+          </div>
+          <div className='about_main_box'>
             <div className='about_info_main'>
               <h3>More Awesome Tools Coming Soon</h3>
               <ul>
@@ -206,7 +179,7 @@ const Home = () => {
             </div>
             <img className='about_img_main' src={Dawn_img} alt=''/>
   
-          </motion.div>
+          </div>
   
   
   
