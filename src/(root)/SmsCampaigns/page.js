@@ -17,24 +17,29 @@ const SmsCampaigns = () => {
     const togglePopup = () => {
         setShowPopup(!showPopup);
     }
+
     const togglePopup2 = () => {
         setShowPopup2(!showPopup2);
         setShowPopup(false);
     }
+
     const togglePopup3 = () => {
         setShowPopup3(!showPopup3);
         setShowPopup2(false);
     }
+
     const togglePopup4 = () => {
         setShowPopup4(!showPopup4);
         setShowPopup3(false);
     }
-    const togglePopup6 = () => {
-        setShowPopup6(!showPopup6);
-    }
+
     const togglePopup5 = () => {
         setShowPopup5(!showPopup5);
         setShowPopup4(false);
+    }
+
+    const togglePopup6 = () => {
+        setShowPopup6(!showPopup6);
     }
 
     return (
@@ -72,7 +77,7 @@ const SmsCampaigns = () => {
                                         <div className="Sms_btns">
 
                                             <button type='button' className='sms_button'>Buy Credits</button>
-                                            <button type='button' className='sms_button'>Upgrade Plan</button>
+                                            <button type='button' className='sms_button' onClick={togglePopup2}>Upgrade Plan</button>
                                             <button type='button' className='sms_button_outline'>Send Message</button>
                                         </div>
                                     </div>
@@ -161,7 +166,7 @@ const SmsCampaigns = () => {
                                 <p className='text_center'>Use my current payment method to pay the set-up fee and pay any recurring fees. You can change this later.</p>
                             </div>
                             <div className='submit_text'>
-                                <button onClick={togglePopup2} type='submit' className='form_btn'>submit</button>
+                                <button onClick={togglePopup} type='submit' className='form_btn'>submit</button>
 
                             </div>
 
@@ -202,7 +207,7 @@ const SmsCampaigns = () => {
                                 <label htmlFor="">Use my current payment method to pay the set-up fee and pay any recurring fees. You can change this later.</label>
                             </div>
                             <div className='submit_text'>
-                                <button onClick={togglePopup2} type='submit'>submit</button>
+                                <button onClick={togglePopup3} type='submit'>submit</button>
 
                             </div>
 
@@ -213,7 +218,7 @@ const SmsCampaigns = () => {
             {showPopup3 && (
                 <div className='popup_overlay'>
                     <div className='popup_content2'>
-                        <h2 className='yellow_cr'>SMS Campaigns Setup Wizard</h2>
+                        <h2 className='yellow_crr'>SMS Campaigns Setup Wizard</h2>
                         <p>Congratulations! </p>
                         <p>Your account was approved to run SMS Campaigns and your Toll Free Number has been assigned below.</p>
                         <h3>Your Toll Free Number: (888) 888 - 8888</h3>
@@ -224,7 +229,7 @@ const SmsCampaigns = () => {
                         <input type="text" placeholder='No Subscription - Pay for bundled credits as needed' />
                         <div>
 
-                            <button type='button' onClick={togglePopup4}>Next</button>
+                            <button type='button' className='btn' onClick={togglePopup4}>Next</button>
                         </div>
 
 
@@ -235,7 +240,7 @@ const SmsCampaigns = () => {
             {showPopup4 && (
                 <div className='popup_overlay'>
                     <div className='popup_content2'>
-                        <h2 className='yellow_cr'>SMS Campaigns Setup Wizard</h2>
+                        <h2 className='yellow_crr'>SMS Campaigns Setup Wizard</h2>
                         <p>Step 2: </p>
 
                         <p>Create your first Keyword. Keywords are used in order to capture contacts and to create an ongoing contact list.</p>
@@ -243,7 +248,7 @@ const SmsCampaigns = () => {
                         <input type="text" placeholder='Type your Keyword here' />
                         <div>
 
-                            <button type='button' onClick={togglePopup5}>Next</button>
+                            <button type='button' className='btn' onClick={togglePopup5}>Next</button>
                         </div>
 
 
@@ -254,7 +259,7 @@ const SmsCampaigns = () => {
             {showPopup5 && (
                 <div className='popup_overlay'>
                     <div className='popup_content2'>
-                        <h2 className='yellow_cr'>SMS Campaigns Setup Wizard</h2>
+                        <h2 className='yellow_crr'>SMS Campaigns Setup Wizard</h2>
                         <p>Step 3: </p>
 
                         <p>Share your keyword with one of the options below:.</p>
@@ -267,7 +272,7 @@ const SmsCampaigns = () => {
                         </div>
                         <div>
 
-                            <button type='button' onClick={togglePopup5}>Next</button>
+                            <button type='button'className='btn' onClick={togglePopup5}>Next</button>
                         </div>
 
 

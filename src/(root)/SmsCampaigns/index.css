@@ -412,15 +412,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     border: none;
     text-align: center;
 }
-.popup_content2 button{
-    background: #FAE100;
-    color: black;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    padding: 5px 10px; 
-    cursor: pointer;
-}
+
 
 .pop-ps{
     display: flex;

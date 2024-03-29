@@ -5260,7 +5260,23 @@
   
   
   
-  
+  .BreadC{
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+    font-size: 14px;
+}
+.BreadC_Active{
+    background-clip: text !important;
+    background: var(--color-yellow2);
+    color: transparent;
+    font-weight: 500;
+}
+.BreadC_past{
+    color: lightgray;
+}
+
+
   
   
   
