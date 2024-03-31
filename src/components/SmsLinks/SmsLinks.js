@@ -6,13 +6,14 @@ import { FaChevronDown, FaRegMessage } from 'react-icons/fa6'
 const SmsLinks = ({ highlightedLink = "" }) => {
 
     const links = [
-        { href: '/SendMessage', text: 'Send Message' },
-        { href: '/PendingMessages', text: 'Pending Messages' },
+        { href: '/SendMessage', text: 'Send Message ' },
+        { href: '/AfterMSG', text: 'Send After trial' },
+        { href: '/PendingMessage', text: 'Pending Messages' },
         { href: '/MyPlan', text: 'My Plan' },
         { href: '/Contacts', text: 'Contacts' },
         { href: '/inbox', text: 'Inbox' },
         { href: '/Keywords', text: 'Keywords' },
-        { href: '/Templates', text: 'Templates' },
+        { href: '/Tempelate', text: 'Templates' },
         { href: '/Settings', text: 'Settings' }
     ];
     return (

@@ -14,6 +14,8 @@ import AddKeyword from './(root)/AddKeyword/page.js'
 import SendMessageOpt from './(root)/SendMessageopt/page.js'
 import TrialOPT from './(root)/TrialOPT/page.js'
 import SmsSign from './(root)/SmsSign/page.js'
+import PendingMessage from './(root)/PendingMessage/page.js'
+import Tempelate from './(root)/Tempelate/page.js'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -32,9 +34,11 @@ root.render(
         <Route path="/Inbox" element={<Inbox />} />
         <Route path="/Keywords" element={<Keywords />} />
         <Route path="/AddKeyword" element={<AddKeyword />} />
-        <Route path="/SendMessageOpt" element={<SendMessageOpt />} />
+        <Route path="/AfterMSG" element={<SendMessageOpt />} />
         <Route path="/TrialOPT" element={<TrialOPT />} />
         <Route path="/SmsSign" element={<SmsSign />} />
+        <Route path="/PendingMessage" element={<PendingMessage />} />
+        <Route path="/Tempelate" element={<Tempelate />} />
       </Routes>
     </Router>
   </React.StrictMode>

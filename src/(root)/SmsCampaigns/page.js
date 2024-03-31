@@ -226,7 +226,12 @@ const SmsCampaigns = () => {
 
                         <p>Please select a plan below to get started.</p>
 
-                        <input type="text" placeholder='No Subscription - Pay for bundled credits as needed' />
+                        {/* <input type="text" placeholder='No Subscription - Pay for bundled credits as needed' /> */}
+                        <select>
+                            <option disabled selected>No Subscription - Pay for bundled credits as needed</option>
+                            <option >No Subscription</option>
+                            <option >Subscription</option>
+                        </select>
                         <div>
 
                             <button type='button' className='btn' onClick={togglePopup4}>Next</button>
@@ -262,12 +267,20 @@ const SmsCampaigns = () => {
                         <h2 className='yellow_crr'>SMS Campaigns Setup Wizard</h2>
                         <p>Step 3: </p>
 
-                        <p>Share your keyword with one of the options below:.</p>
-                        <div className='popup-text'>
-                            <div className="pop-ps">
-                                <p>Use an Embed Code</p>
-                                <p>Use an Embed Code</p>
+                        <p>Share your keyword with one of the options below:</p>
+                        <div className='pop_invite'>
+                            <p>Invite customers to join via: </p>
+                            <div className='pop_inul'>
+                            <ul>
+                                <li>A post caption on social media</li>
+                                <li>a banner on your website</li>
+                                <li>A flyer for a special event or occasion</li>
+                            </ul>
                             </div>
+                            <p>Copy and Paste the invitation below (or create a similar one):</p>
+                        </div>
+                        
+                        <div className='popup-text'>
                             <textarea name="" id=""></textarea>
                         </div>
                         <div>

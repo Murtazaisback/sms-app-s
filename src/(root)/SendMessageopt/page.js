@@ -22,7 +22,7 @@ const SendMessageOpt = () => {
                         <ul className="nav-links">
                             <Silder_icon />
                             <li>
-                                <SmsLinks highlightedLink="/SendMessage" />
+                                <SmsLinks highlightedLink="/AfterMSG" />
                             </li>
                         </ul>
                     </div>
@@ -34,9 +34,9 @@ const SendMessageOpt = () => {
                                     <div className="sms_area_left">
                                         <div className="sms_Credits_box">
                                             <div className="headings_trail">
-                                                <h2>Sned a message (trial)</h2>
+                                                <h2>Sned a message</h2>
                                             </div>
-                                            <p style={{textAlign: 'center'}}>2u287879Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem atque, voluptates earum </p>
+                                            <p style={{textAlign: 'center'}}>Choose Contacts</p>
                                             <select name="" id="" className='sms_Credits_input'>
                                                 <option value="" disabled selected>Select your contacts group</option>
                                                 <option value="" >d</option>

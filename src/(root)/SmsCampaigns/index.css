@@ -4,13 +4,13 @@
 
 .SMS_Dashboard_box {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
     flex-direction: column;
 }
 .sms_area_bottom{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 }
 .SMS_Dashboard_box_one{
@@ -42,8 +42,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 14px;
+    gap: 25px;
+    padding: 20px;
 }
 
 .progressBar_warp {
@@ -71,6 +71,10 @@
 .sms_bold {
     color: var(--sms_colors);
     font-weight: 600;
+    font-size: 17px;
+}
+.sms_box_p{
+    padding: 30px 40px;
 }
 
 .sms_button {
@@ -146,6 +150,9 @@
     border-radius: 25px;
     color: black;
 }
+.sm_p{
+    font-size: 12px;
+}
 
 .popup_overlay {
     position: absolute;
@@ -177,7 +184,29 @@
     
 }
 .sms_pop_sm{
+    width: 30% !important;
+    padding: 30px 40px;
+}
+.sms_pop_md{
     width: 35% !important;
+}
+.sm_key_table{
+    font-size: 14px;
+}
+.text_pending{
+    text-align: left;
+    margin-top: 30px;
+}
+.actions_i{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    font-size: 23px;
+}
+.action_i{
+    cursor: pointer;
+    color: #D8C690;
 }
 
 .popup_content h2 {
@@ -346,9 +375,13 @@
     flex-direction: column;
     gap: 20px;
 }
+.sms-warp_black{
+    background: black !important;
+}
 
 .sms_keywords_table {
     margin-top: 20px;
+    text-align: center;
 }
 
 .sms_keywords_table thead {
@@ -412,8 +445,39 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     border: none;
     text-align: center;
 }
-
-
+.popup_content2 select{
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+.popup_content2 select:disabled{
+    color: gray !important;
+}
+.popup_content2 textarea{
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+.pop_invite{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pop_inul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop_invite ul{
+    list-style: disc !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .pop-ps{
     display: flex;
     align-items: center;
@@ -730,7 +794,55 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     justify-content: right;
     gap: 10px;
 }
+
+
+.stats_summary{
+    background: #212121;
+    box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset; 
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+.stats_summary_warp{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.stats_content{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.stats_content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.X_stats{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #D8C690;
+    font-size: 19px;
+    cursor: pointer;
+}
+.editing_in{
+    background: black;
+    border: none;
+    outline: none;
+    color: white;
+    width: 70px;
+}
+
+
+
+
 @media screen and (max-width: 860px) {
+    .stats_content{
+        flex-direction: column;
+        gap: 50px;
+    }
     .sms_area_warp{
         flex-direction: column;
     }

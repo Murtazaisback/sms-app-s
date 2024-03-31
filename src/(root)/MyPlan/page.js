@@ -27,9 +27,9 @@ const MyPlan = () => {
                                     <div className="sms_area_top">
                                         <div className="sms_Credits_box">
                                             <p className='sms_bold'>My Plan</p>
-                                            <p>No Subscription — Pay for bundled credits as needed</p>
+                                            <p>[Display Plan Here]</p>
                                             <p className='sms_bold'>Change Plan</p>
-                                            <p>Note: You will be charged the difference in your plan</p>
+                                            <p className='sm_p'>Note: You will be charged the difference in your plan</p>
                                             <select name="" id="" className='sms_Credits_input'>
                                                 <option value="" disabled selected>No Subscription - Pay for bundled credits as needed</option>
                                                 <option value="" >d</option>
@@ -40,14 +40,16 @@ const MyPlan = () => {
 
                                     </div>
                                     <div className="sms_area_bottom">
-                                        <div className="sms_Credits_box">
+                                        <div className="sms_Credits_box sms_box_p">
                                             <p className='sms_bold'>Purchase One-Time Credit Bundle</p>
+                                            <p>Choose from the options below:</p>
                                            
                                             <select name="" id="" className='sms_Credits_input'>
                                                 <option value="" disabled selected>500 Credits - $24.95 One-time</option>
                                                 <option value="" >d</option>
                                                 <option value="" >d</option>
                                             </select>
+                                            <p>These credits will be added to your existing balance.</p>
                                             <button type='button' className='sms_button_outline'>Update</button>
                                         </div>
                                     <div className="sms_Credits_box">

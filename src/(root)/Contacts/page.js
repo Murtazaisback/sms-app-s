@@ -10,7 +10,7 @@ import RootLayout from '../layout.js';
 
 
 const Contacts = () => {
-    const [showPopup, setShowPopup] = useState(true); // Initialize to true
+    const [showPopup, setShowPopup] = useState(false); // Initialize to true
     const [showPopup2, setShowPopup2] = useState(false);
     const [showPopup3, setShowPopup3] = useState(false);
     const [showPopup4, setShowPopup4] = useState(false);
@@ -192,7 +192,7 @@ const Contacts = () => {
             {showPopup3 && (
                 <div className="popup_overlay">
                     <div className="popup_content sms_pop_sm">
-                        <p className='p_content'>Add a Link to Your Message </p>
+                        <p className='p_content'>Please confirm that you want to send this message.</p>
                         <div className="pop_text_cent">
 
                         <p>Note: This will use { } of your total remaining credits.</p>
@@ -206,7 +206,7 @@ const Contacts = () => {
             )}
             {showPopup4 && (
                 <div className="popup_overlay">
-                    <div className="popup_content sms_pop_sm">
+                    <div className="popup_content sms_pop_md">
                         <p className='p_content'>Apply Template</p>
                         <div className="my_temp">
                             <div className="temp_header">
@@ -215,17 +215,17 @@ const Contacts = () => {
                             </div>
                             <div className="temp_body">
                                 <div className="temp_select_row">
-                                    <p>Template</p>
+                                    <p>TemplateName</p>
                                     <p>Preview first 20 char...</p>
                                     <div className='bulk_ac_btn'>Apply</div>
                                 </div>
                                 <div className="temp_select_row">
-                                    <p>Template</p>
+                                    <p>TemplateName</p>
                                     <p>Preview first 20 char...</p>
                                     <div className='bulk_ac_btn'>Apply</div>
                                 </div>
                                 <div className="temp_select_row">
-                                    <p>Template</p>
+                                    <p>TemplateName</p>
                                     <p>Preview first 20 char...</p>
                                     <div className='bulk_ac_btn'>Apply</div>
                                 </div>
