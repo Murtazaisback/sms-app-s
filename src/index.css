@@ -446,6 +446,7 @@
   
   
   .btn {
+    cursor: pointer;
       border-radius: 25px;
       padding: 9px 9px;
       text-align: center;
@@ -2348,8 +2349,8 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      text-align: right;
-      align-items: flex-end;
+      /* text-align: right; */
+      /* align-items: flex-end; */
       /* margin-top: -10px !important; */
   }
   
@@ -3733,7 +3734,7 @@
   
   
   .panel {
-      padding: 0 18px;
+      padding: 0 10px;
       /* background-color: white; */
       /* display: none; */
       overflow: hidden;
@@ -4838,42 +4839,33 @@
   }
   
   .home-section {
-      position: relative;
-      color: white;
-      /* height: 165vh; */
-      width: calc(100% - 260px);
-      transition: all 0.5s ease;
-      border-radius: 5px;
-      /* background-image: url(./imgs/Rectangle\ 2.png);
-     background-repeat: no-repeat;
-     background-size: cover; */
-      /* fill: #000; */
-      /* box-shadow: 2px 2px 4px 0px #212121 inset, -2px -2px 4px 0px #25251F inset; */
-      /* filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25)); */
-      box-shadow: 2px 2px 4px 0px #212121 inset, -2px -2px 4px 0px #25251F inset;
-      filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
-      fill: #000;
-      background: #000;
-  }
+    position: relative;
+    color: white;
+    /* min-width: 85%; */
+    width: calc(100% - 50px);
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0px #212121 inset, -2px -2px 4px 0px #25251F inset;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+    fill: #000;
+    background: #000;
+}
   
   .sidebar.close~.home-section {
       /* left: 78px; */
-      width: calc(100% - 78px);
+      /* width: calc(100% - 78px); */
       padding-bottom: 20px;
   }
   
   .home-section .home-content {
-      /* height: 60px; */
-      padding: 20px;
-      padding-top: 10px;
-      display: flex;
-      /* align-items: center; */
-      position: relative;
-      height: 100%;
-      /* box-shadow: 2px 2px 4px 0px #212121 inset, -2px -2px 4px 0px #25251F inset; */
-      padding-bottom: 20px;
-      min-height: 80vh;
-  }
+    padding: 20px;
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+    height: 100%;
+    padding-bottom: 10px;
+    min-height: 80vh;
+}
   
   
   
@@ -5274,6 +5266,9 @@
 }
 .BreadC_past{
     color: lightgray;
+}
+.text_center{
+    text-align: center;
 }
 
 

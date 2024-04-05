@@ -6,7 +6,14 @@ import RootLayout from '../layout.js';
 import { BsCloudArrowDown } from "react-icons/bs";
 import { IoBarChartOutline } from "react-icons/io5";
 import { HiXMark } from "react-icons/hi2";
-
+import { FaChevronDown, FaRegMessage } from 'react-icons/fa6'
+import { AiOutlineMessage } from "react-icons/ai";
+import { BiMessageRoundedError } from "react-icons/bi";
+import { GrPlan } from "react-icons/gr";
+import { IoIosContact } from "react-icons/io";
+import { MdOutlineForwardToInbox } from "react-icons/md";
+import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { GoGear } from "react-icons/go";
 
 
 
@@ -30,12 +37,83 @@ const PendingMessage = () => {
                     <div className="dashboard_main">
                         <div className="dashboard_section">
                             <div className="sidebar ">
-                                <ul className="nav-links">
-                                    <Silder_icon />
-                                    <li>
-                                        <SmsLinks highlightedLink="/PendingMessage" />
-                                    </li>
-                                </ul>
+                            <ul className="nav-links">
+                            <Silder_icon />
+                            <li>
+                                <a href="/SmsCampaigns">
+                                <FaRegMessage className=" menu_dash_i" />
+
+                                    <span className="link_name ">SMS CAMPAIGNS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div className="iocn-link">
+                                    <a href="/SendMessage">
+                                        <AiOutlineMessage className=" menu_dash_i" />
+
+                                        <span className="link_name ">Send Message</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/AfterMSG">
+                                    <AiOutlineMessage className=" menu_dash_i" />
+                                    <span className="link_name">Send AFM</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/PendingMessage">
+                                    <BiMessageRoundedError className="yellow_m menu_dash_i" />
+                                    <span className="link_name yellow_m">Pending Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/MyPlan">
+                                    <GrPlan className=" menu_dash_i" />
+                                    <span className="link_name">My Plan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div className="iocn-link">
+                                    <a href="/Contacts">
+                                        <IoIosContact className=" menu_dash_i" />
+                                        <span className="link_name">Contacts</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="iocn-link">
+                                    <a href="/inbox">
+                                        <MdOutlineForwardToInbox  className=" menu_dash_i" />
+                                        <span className="link_name">Inbox</span>
+                                    </a>
+                                </div>
+                            </li>
+                                <li>
+                                    <div className="iocn-link">
+                                        <a href="/Keywords">
+                                            <LuWholeWord className=" menu_dash_i" />
+                                            <span className="link_name">Keywords</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="iocn-link">
+                                        <a href="/Tempelate">
+                                            <LuBookTemplate className=" menu_dash_i" />
+                                            <span className="link_name">Templates</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="iocn-link">
+                                        <a href="/Settings">
+                                            <GoGear className=" menu_dash_i" />
+                                            <span className="link_name">Settings</span>
+                                        </a>
+                                    </div>
+                                </li>
+                        </ul>
                             </div>
                             <section className="home-section">
                                 <div className="home-content">
@@ -94,66 +172,109 @@ const PendingMessage = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        
-                                                        {demoDataFromBackend.map((data) => (
 
-                                                        <tr key={data.id}>
-                                                            <td>X</td>
-                                                            <td>12/22/2025 - 1:34 PM PST</td>
-                                                            <td>EVENT</td>
-                                                            <td>456</td>
-                                                            <td > Show full message preview here</td>
-                                                            <td className='actions_i'>
-                                                                <BsCloudArrowDown className='action_i' />
-                                                                <IoBarChartOutline
-                                                                    className='action_i'
-                                                                    onClick={() => toggleStats(data.id)}
-                                                                />
-                                                            </td>
-                                                        </tr>
-                                                         ))}
+                                                        {demoDataFromBackend.map((data) => (
+                                                            <React.Fragment key={data.id}>
+                                                                <tr onClick={() => toggleStats(data.id)}>
+                                                                    <td>X</td>
+                                                                    <td>12/22/2025 - 1:34 PM PST</td>
+                                                                    <td>EVENT</td>
+                                                                    <td>456</td>
+                                                                    <td>Show full message preview here</td>
+                                                                    <td className='actions_i'>
+                                                                        <BsCloudArrowDown className='action_i' />
+                                                                        <IoBarChartOutline className='action_i' />
+                                                                    </td>
+                                                                </tr>
+                                                                {openStats === data.id && (
+                                                                    <tr>
+                                                                        <td colSpan="6">
+                                                                            <div  className='stats_summary' style={{
+                                                                                opacity: openStats === data.id ? 1 : 0,
+                                                                                height: openStats === data.id ? 'auto' : 0,
+                                                                                transition: 'opacity 0.01s ease, height 0.3s ease'
+                                                                            }}>
+                                                                                <div className='stats_summary_warp'>
+                                                                                    <h3 className='sms_bold'>Summary Stats</h3>
+                                                                                    <div className='stats_content'>
+                                                                                        <div className='stats_content-left'>
+                                                                                            <p>Total Sent: {data.totalSent}</p>
+                                                                                            <p>Delivered: {data.delivered}</p>
+                                                                                            <p>Not Delivered: 24 (Click to export Contact list subset)</p>
+                                                                                            <p>Replied: 0</p>
+                                                                                            <p>Opt-outs: 2</p>
+                                                                                            <p>Unknown: 0</p>
+                                                                                        </div>
+                                                                                        <div className='stats_content-right'>
+                                                                                            <p>Tracing Link (if applicable):</p>
+                                                                                            <div>
+                                                                                                <p>Message link: https://examplelink.com</p>
+                                                                                                <p>Total Clicks: 226</p>
+                                                                                                <p>Unique Clicks: 124</p>
+                                                                                                <p>Click Through Rate: 18%</p>
+
+                                                                                            </div>
+                                                                                            <p>Export contacts who clicked</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div>
+
+                                                                                        <button className='bulk_ac_btn' onClick={() => toggleStats(data.id)}>Close</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <HiXMark className='X_stats' onClick={() => toggleStats(data.id)} />
+
+
+
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                )}
+                                                            </React.Fragment>
+                                                        ))}
+
                                                     </tbody>
                                                 </table>
-                                                {demoDataFromBackend.map((data) => (
-                                                    <div key={data.id} className='stats_summary' style={{ 
-                                                        opacity: openStats === data.id ? 1 : 0, 
+                                                {/* {demoDataFromBackend.map((data) => (
+                                                    <div key={data.id} className='stats_summary' style={{
+                                                        opacity: openStats === data.id ? 1 : 0,
                                                         height: openStats === data.id ? 'auto' : 0,
                                                         transition: 'opacity 0.01s ease, height 0.3s ease'
                                                     }}>
-                                                    <div className='stats_summary_warp'>
-                                                        <h3 className='sms_bold'>Summary Stats</h3>
-                                                        <div className='stats_content'>
-                                                            <div className='stats_content-left'>
-                                                                <p>Total Sent: {data.totalSent}</p>
-                                                                <p>Delivered: {data.delivered}</p>
-                                                                <p>Not Delivered: 24 (Click to export Contact list subset)</p>
-                                                                <p>Replied: 0</p>
-                                                                <p>Opt-outs: 2</p>
-                                                                <p>Unknown: 0</p>
-                                                            </div>
-                                                            <div className='stats_content-right'>
-                                                                <p>Tracing Link (if applicable):</p>
-                                                                <div>
-                                                                    <p>Message link: https://examplelink.com</p>
-                                                                    <p>Total Clicks: 226</p>
-                                                                    <p>Unique Clicks: 124</p>
-                                                                    <p>Click Through Rate: 18%</p>
-                                                                    
+                                                        <div className='stats_summary_warp'>
+                                                            <h3 className='sms_bold'>Summary Stats</h3>
+                                                            <div className='stats_content'>
+                                                                <div className='stats_content-left'>
+                                                                    <p>Total Sent: {data.totalSent}</p>
+                                                                    <p>Delivered: {data.delivered}</p>
+                                                                    <p>Not Delivered: 24 (Click to export Contact list subset)</p>
+                                                                    <p>Replied: 0</p>
+                                                                    <p>Opt-outs: 2</p>
+                                                                    <p>Unknown: 0</p>
                                                                 </div>
-                                                                <p>Export contacts who clicked</p>
+                                                                <div className='stats_content-right'>
+                                                                    <p>Tracing Link (if applicable):</p>
+                                                                    <div>
+                                                                        <p>Message link: https://examplelink.com</p>
+                                                                        <p>Total Clicks: 226</p>
+                                                                        <p>Unique Clicks: 124</p>
+                                                                        <p>Click Through Rate: 18%</p>
+
+                                                                    </div>
+                                                                    <p>Export contacts who clicked</p>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+
+                                                                <button className='bulk_ac_btn' onClick={() => toggleStats(data.id)}>Close</button>
                                                             </div>
                                                         </div>
-                                                        <div>
+                                                        <HiXMark className='X_stats' onClick={() => toggleStats(data.id)} />
 
-                                                        <button className='bulk_ac_btn' onClick={() => toggleStats(data.id)}>Close</button>
-                                                        </div>
+
+
                                                     </div>
-                                                    <HiXMark className='X_stats'onClick={() => toggleStats(data.id)} />
-
-
-
-                                                </div>
-                                                 ))}
+                                                ))} */}
                                             </div>
 
                                         </div>

@@ -5,6 +5,16 @@ import '../SmsCampaigns/index.css'
 import RootLayout from '../layout.js';
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FaRegListAlt } from "react-icons/fa";
+import { FaChevronDown, FaRegMessage } from 'react-icons/fa6'
+import { AiOutlineMessage } from "react-icons/ai";
+import { BiMessageRoundedError } from "react-icons/bi";
+import { GrPlan } from "react-icons/gr";
+import { IoIosContact } from "react-icons/io";
+import { MdOutlineForwardToInbox } from "react-icons/md";
+import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { GoGear } from "react-icons/go";
+import { LuLayoutTemplate } from "react-icons/lu";
+
 
 
 
@@ -52,7 +62,7 @@ const Tempelate = () => {
         );
     };
 
-    
+
     return (
         <>
             <RootLayout>
@@ -63,7 +73,78 @@ const Tempelate = () => {
                                 <ul className="nav-links">
                                     <Silder_icon />
                                     <li>
-                                        <SmsLinks highlightedLink="/Tempelate" />
+                                        <a href="/SmsCampaigns">
+                                            <FaRegMessage className=" menu_dash_i" />
+
+                                            <span className="link_name ">SMS CAMPAIGNS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/SendMessage">
+                                                <AiOutlineMessage className=" menu_dash_i" />
+
+                                                <span className="link_name ">Send Message</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/AfterMSG">
+                                            <AiOutlineMessage className=" menu_dash_i" />
+                                            <span className="link_name ">Send AFM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/PendingMessage">
+                                            <BiMessageRoundedError className=" menu_dash_i" />
+                                            <span className="link_name ">Pending Messages</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/MyPlan">
+                                            <GrPlan className=" menu_dash_i" />
+                                            <span className="link_name ">My Plan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Contacts">
+                                                <IoIosContact className=" menu_dash_i" />
+                                                <span className="link_name">Contacts</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/inbox">
+                                                <MdOutlineForwardToInbox className=" menu_dash_i" />
+                                                <span className="link_name">Inbox</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Keywords">
+                                                <LuWholeWord className=" menu_dash_i " />
+                                                <span className="link_name ">Keywords</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Tempelate">
+                                                <LuLayoutTemplate className=" menu_dash_i yellow_m" />
+                                                <span className="link_name yellow_m">Templates</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Settings">
+                                                <GoGear className=" menu_dash_i" />
+                                                <span className="link_name">Settings</span>
+                                            </a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -84,26 +165,26 @@ const Tempelate = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    {rows.map(row => (
-                                                         <tr key={row.id}>
-                                                         <td>{row.isEditing ? <input type="text" value={row.event} onChange={(e) => handleInputChange(e, row.id, 'event')} className="editing_in" /> : row.event}</td>
-                                                         <td>{row.isEditing ? <input type="text" value={row.name} onChange={(e) => handleInputChange(e, row.id, 'name')} className="editing_in" /> : row.name}</td>
-                                                         <td>{row.isEditing ? <input type="text" value={row.preview} onChange={(e) => handleInputChange(e, row.id, 'preview')} className="editing_in" /> : row.preview}</td>
-                                                         <td className='actions_i'>
-                                                             {row.isEditing ? (
-                                                                 <>
-                                                                     <FaRegListAlt className='action_i' onClick={() => handleSaveEdit(row.id)} />
-                                                                     <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
-                                                                 </>
-                                                             ) : (
-                                                                 <>
-                                                                
-                                                                <FaRegListAlt className='action_i' onClick={() => handleEditRow(row.id)} />
-                                                                 <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
-                                                                </>
-                                                             )}
-                                                         </td>
-                                                     </tr>
+                                                        {rows.map(row => (
+                                                            <tr key={row.id}>
+                                                                <td>{row.isEditing ? <input type="text" value={row.event} onChange={(e) => handleInputChange(e, row.id, 'event')} className="editing_in" /> : row.event}</td>
+                                                                <td>{row.isEditing ? <input type="text" value={row.name} onChange={(e) => handleInputChange(e, row.id, 'name')} className="editing_in" /> : row.name}</td>
+                                                                <td>{row.isEditing ? <input type="text" value={row.preview} onChange={(e) => handleInputChange(e, row.id, 'preview')} className="editing_in" /> : row.preview}</td>
+                                                                <td className='actions_i'>
+                                                                    {row.isEditing ? (
+                                                                        <>
+                                                                            <FaRegListAlt className='action_i' onClick={() => handleSaveEdit(row.id)} />
+                                                                            <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
+                                                                        </>
+                                                                    ) : (
+                                                                        <>
+
+                                                                            <FaRegListAlt className='action_i' onClick={() => handleEditRow(row.id)} />
+                                                                            <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
+                                                                        </>
+                                                                    )}
+                                                                </td>
+                                                            </tr>
                                                         ))}
                                                     </tbody>
                                                 </table>

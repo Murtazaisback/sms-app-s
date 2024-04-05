@@ -7,6 +7,9 @@
     gap: 20px;
     margin-top: 20px;
     flex-direction: column;
+    /* align-items: flex-end; */
+    /* justify-content: right; */
+    /* align-self: flex-end; */
 }
 .sms_area_bottom{
     display: flex;
@@ -156,7 +159,20 @@
 
 .popup_overlay {
     position: absolute;
-    top: 0;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 1000;
+}
+.popup_overlay2 {
+    position: absolute;
+    top: 0%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -180,9 +196,25 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    height: fit-content;
-    
+    height: 85vh;
+    overflow-x: scroll;
+    scrollbar-width: none !important;
 }
+.popup_content3 {
+    position: relative !important;
+    background: black;
+    padding: 27px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.399), inset 0px 0px 10px rgba(255, 255, 255, 0.399);
+    width: 55%;
+    /* max-width: 80%; */
+    /* border: 1px solid #FAE100; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+}
+/* .popup_content:sc */
 .sms_pop_sm{
     width: 30% !important;
     padding: 30px 40px;
@@ -310,6 +342,27 @@
     justify-content: space-between;
     text-align: right;
 }
+.sms_infos_btns p{
+    cursor: pointer;
+}
+.Paste_link{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Paste_link input{
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+.Paste_link select {
+    border-radius: 15px;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
 
 .send_messages {
     display: flex;
@@ -344,11 +397,11 @@
     background: white;
 }
 
-.prev_message_box input::placeholder {
+.prev_message_box textarea::placeholder {
     color: white;
 }
 
-.prev_message_box input {
+.prev_message_box textarea {
     background: #C5C5C5;
     color: #636363;
     border: none;
@@ -356,6 +409,8 @@
     padding: 5px;
     border-radius: 5px;
     width: 100%;
+    height: fit-content;
+    resize: vertical;
 }
 
 .sms_pay {
@@ -839,6 +894,12 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
 
 
 @media screen and (max-width: 860px) {
+    .popup_overlay{
+        top: 0;
+    }
+    .popup_content{
+        height: fit-content;
+    }
     .stats_content{
         flex-direction: column;
         gap: 50px;

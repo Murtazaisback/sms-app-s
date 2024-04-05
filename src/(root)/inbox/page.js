@@ -5,6 +5,14 @@ import SubMenus, { Silder_icon } from '../../components/SubMenus/SubMenus'
 import React, { useState } from 'react'
 import '../SmsCampaigns/index.css'
 import RootLayout from '../layout.js';
+import { FaChevronDown, FaRegMessage } from 'react-icons/fa6'
+import { AiOutlineMessage } from "react-icons/ai";
+import { BiMessageRoundedError } from "react-icons/bi";
+import { GrPlan } from "react-icons/gr";
+import { IoIosContact } from "react-icons/io";
+import { MdOutlineForwardToInbox } from "react-icons/md";
+import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { GoGear } from "react-icons/go";
 
 
 const Inbox = () => {
@@ -20,12 +28,83 @@ const Inbox = () => {
             <div className="dashboard_main">
                 <div className="dashboard_section">
                     <div className="sidebar ">
-                        <ul className="nav-links">
-                            <Silder_icon />
-                            <li>
-                                <SmsLinks highlightedLink="/inbox" />
-                            </li>
-                        </ul>
+                    <ul className="nav-links">
+                                    <Silder_icon />
+                                    <li>
+                                        <a href="/SmsCampaigns">
+                                            <FaRegMessage className=" menu_dash_i" />
+
+                                            <span className="link_name ">SMS CAMPAIGNS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/SendMessage">
+                                                <AiOutlineMessage className=" menu_dash_i" />
+
+                                                <span className="link_name ">Send Message</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/AfterMSG">
+                                            <AiOutlineMessage className=" menu_dash_i" />
+                                            <span className="link_name ">Send AFM</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/PendingMessage">
+                                            <BiMessageRoundedError className=" menu_dash_i" />
+                                            <span className="link_name ">Pending Messages</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/MyPlan">
+                                            <GrPlan className=" menu_dash_i" />
+                                            <span className="link_name ">My Plan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Contacts">
+                                                <IoIosContact className=" menu_dash_i " />
+                                                <span className="link_name ">Contacts</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/inbox">
+                                                <MdOutlineForwardToInbox className=" menu_dash_i yellow_m" />
+                                                <span className="link_name yellow_m">Inbox</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Keywords">
+                                                <LuWholeWord className=" menu_dash_i" />
+                                                <span className="link_name">Keywords</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Tempelate">
+                                                <LuBookTemplate className=" menu_dash_i" />
+                                                <span className="link_name">Templates</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Settings">
+                                                <GoGear className=" menu_dash_i" />
+                                                <span className="link_name">Settings</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                     </div>
                     <section className="home-section">
                         <div className="home-content">
