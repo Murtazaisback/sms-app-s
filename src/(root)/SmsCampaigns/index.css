@@ -171,7 +171,7 @@
     z-index: 1000;
 }
 .popup_overlay2 {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0;
     width: 100%;
@@ -206,11 +206,13 @@
     padding: 27px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.399), inset 0px 0px 10px rgba(255, 255, 255, 0.399);
-    width: 55%;
+    width: 35%;
     /* max-width: 80%; */
     /* border: 1px solid #FAE100; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
     gap: 30px;
     height: fit-content;
 }
@@ -220,7 +222,7 @@
     padding: 30px 40px;
 }
 .sms_pop_md{
-    width: 35% !important;
+    width: 30% !important;
 }
 .sm_key_table{
     font-size: 14px;
@@ -231,10 +233,12 @@
 }
 .actions_i{
     display: flex;
-    align-items: center;
+    align-items: center !important;
     gap: 20px;
     justify-content: center;
     font-size: 23px;
+    margin: 0;
+    padding: 0;
 }
 .action_i{
     cursor: pointer;
@@ -409,8 +413,11 @@
     padding: 5px;
     border-radius: 5px;
     width: 100%;
-    height: fit-content;
-    resize: vertical;
+    height: 50%;
+    min-height: 50px ;
+    max-height: 250px;
+    overflow-y: auto;
+    resize: none;
 }
 
 .sms_pay {
@@ -665,6 +672,12 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     text-align: center;
     gap: 5px;
 }
+.form_input_sms input{
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 3px 10px;
+}
 
 .Message_sms_pop{
     display: flex;
@@ -851,12 +864,29 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
 }
 
 
+.stats-summary-transition {
+    transition: all 0.3s ease;
+  }
+
 .stats_summary{
     background: #212121;
     box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset; 
     padding: 10px;
     border-radius: 15px;
     position: relative;
+    /* opacity: 0; */
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+.add_keyword_cr{
+    font-size: 19px;
+    font-weight: 500;
+    color: #D8C690;
+}
+.btn_warp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .stats_summary_warp{
     display: flex;
@@ -889,8 +919,30 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     color: white;
     width: 70px;
 }
+.table_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /* gap: 75px; */
 
-
+}
+.table_row th{
+    width: 150px;
+    /* border-bottom: 1px solid ; */
+    margin-bottom: 10px;
+    /* font-size: 17px; */
+}
+.Table_head {
+    border-bottom: 1px solid yellow;
+    margin-bottom: 10px;
+}
+.table_row td{
+    width: 150px;
+}
+.table_row td:nth-child(3){
+    width: 200px;
+}
 
 
 @media screen and (max-width: 860px) {

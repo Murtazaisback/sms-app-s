@@ -9,7 +9,7 @@ import { BiMessageRoundedError } from "react-icons/bi";
 import { GrPlan } from "react-icons/gr";
 import { IoIosContact } from "react-icons/io";
 import { MdOutlineForwardToInbox } from "react-icons/md";
-import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { LuWholeWord, LuLayoutTemplate } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 
 const MyPlan = () => {
@@ -52,7 +52,7 @@ const MyPlan = () => {
                                     </li>
                                     <li>
                                         <a href="/MyPlan">
-                                            <GrPlan className=" menu_dash_i" />
+                                            <GrPlan className=" menu_dash_i " />
                                             <span className="link_name yellow_m">My Plan</span>
                                         </a>
                                     </li>
@@ -83,7 +83,7 @@ const MyPlan = () => {
                                     <li>
                                         <div className="iocn-link">
                                             <a href="/Tempelate">
-                                                <LuBookTemplate className=" menu_dash_i" />
+                                                <LuLayoutTemplate className=" menu_dash_i" />
                                                 <span className="link_name">Templates</span>
                                             </a>
                                         </div>

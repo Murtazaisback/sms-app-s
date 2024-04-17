@@ -12,7 +12,7 @@ import { BiMessageRoundedError } from "react-icons/bi";
 import { GrPlan } from "react-icons/gr";
 import { IoIosContact } from "react-icons/io";
 import { MdOutlineForwardToInbox } from "react-icons/md";
-import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { LuWholeWord, LuLayoutTemplate } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 
 const SendMessageOpt = () => {
@@ -130,7 +130,7 @@ const SendMessageOpt = () => {
                                 <li>
                                     <div className="iocn-link">
                                         <a href="/Tempelate">
-                                            <LuBookTemplate className=" menu_dash_i" />
+                                            <LuLayoutTemplate className=" menu_dash_i" />
                                             <span className="link_name">Templates</span>
                                         </a>
                                     </div>
@@ -334,17 +334,25 @@ const SendMessageOpt = () => {
 
 
 {showPopup5 && (
-                <div className="popup_overlay2">
-                    <div className="popup_content3 sms_pop_sm">
-                        <p className='text_center'>Paste your Link here</p>
-                        <form className='Paste_link'>
-                            <input type="text" className="" placeholder='Enter Link' />
-                            <button type="submit" className='btn' onClick={togglePopup5} >Submit</button>
-                        </form>
+                 <div className="popup_overlay">
+                 <div className="popup_content2 sms_pop_sm">
+                     <p className='p_content'>Add a Link to Your Message </p>
+                     <form action="" className='Message_sms_pop'>
+                         <div className="inp_sms_pop">
+                             <label htmlFor="">Insert your link below (Note: ALL links must begin with “https”):</label>
+                             <input type="text" />
+                         </div>
+                         <div className="inp_sms_check">
+                             <input type="checkbox" />
+                             <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                         </div>
+                         <div onClick={togglePopup5} className='bulk_ac_btn'>Add Link</div>
 
-                        <div onClick={togglePopup5} href='' className="close_popup"><HiXMark /></div>
-                    </div>
-                </div>
+                     </form>
+
+                     <div onClick={togglePopup5} className="close_popup"><HiXMark /></div>
+                 </div>
+             </div>
             )}
             {showPopup6 && (
                 <div className="popup_overlay2">
@@ -356,7 +364,7 @@ const SendMessageOpt = () => {
                                 <option value="" >Your Template</option>
                                 <option value="" >Your Template</option>
                             </select>
-                            <button type="submit" className='btn' onClick={togglePopup6} >Submit</button>
+                            <button type="submit" className='btn' onClick={togglePopup6} >Apply</button>
                         </form>
 
                         <div onClick={togglePopup6} href='' className="close_popup"><HiXMark /></div>

@@ -12,13 +12,15 @@ import { BiMessageRoundedError } from "react-icons/bi";
 import { GrPlan } from "react-icons/gr";
 import { IoIosContact } from "react-icons/io";
 import { MdOutlineForwardToInbox } from "react-icons/md";
-import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { LuWholeWord, LuLayoutTemplate } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 
 
 
 const PendingMessage = () => {
     const [openStats, setOpenStats] = useState(null);
+    const transitionClass = openStats ? 'stats-summary-transition' : '';
+
 
     // Sample backend data
     const demoDataFromBackend = [
@@ -37,83 +39,83 @@ const PendingMessage = () => {
                     <div className="dashboard_main">
                         <div className="dashboard_section">
                             <div className="sidebar ">
-                            <ul className="nav-links">
-                            <Silder_icon />
-                            <li>
-                                <a href="/SmsCampaigns">
-                                <FaRegMessage className=" menu_dash_i" />
+                                <ul className="nav-links">
+                                    <Silder_icon />
+                                    <li>
+                                        <a href="/SmsCampaigns">
+                                            <FaRegMessage className=" menu_dash_i" />
 
-                                    <span className="link_name ">SMS CAMPAIGNS</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/SendMessage">
-                                        <AiOutlineMessage className=" menu_dash_i" />
+                                            <span className="link_name ">SMS CAMPAIGNS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/SendMessage">
+                                                <AiOutlineMessage className=" menu_dash_i" />
 
-                                        <span className="link_name ">Send Message</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="/AfterMSG">
-                                    <AiOutlineMessage className=" menu_dash_i" />
-                                    <span className="link_name">Send AFM</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/PendingMessage">
-                                    <BiMessageRoundedError className="yellow_m menu_dash_i" />
-                                    <span className="link_name yellow_m">Pending Messages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/MyPlan">
-                                    <GrPlan className=" menu_dash_i" />
-                                    <span className="link_name">My Plan</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/Contacts">
-                                        <IoIosContact className=" menu_dash_i" />
-                                        <span className="link_name">Contacts</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/inbox">
-                                        <MdOutlineForwardToInbox  className=" menu_dash_i" />
-                                        <span className="link_name">Inbox</span>
-                                    </a>
-                                </div>
-                            </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Keywords">
-                                            <LuWholeWord className=" menu_dash_i" />
-                                            <span className="link_name">Keywords</span>
+                                                <span className="link_name ">Send Message</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/AfterMSG">
+                                            <AiOutlineMessage className=" menu_dash_i" />
+                                            <span className="link_name">Send AFM</span>
                                         </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Tempelate">
-                                            <LuBookTemplate className=" menu_dash_i" />
-                                            <span className="link_name">Templates</span>
+                                    </li>
+                                    <li>
+                                        <a href="/PendingMessage">
+                                            <BiMessageRoundedError className="yellow_m menu_dash_i" />
+                                            <span className="link_name yellow_m">Pending Messages</span>
                                         </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Settings">
-                                            <GoGear className=" menu_dash_i" />
-                                            <span className="link_name">Settings</span>
+                                    </li>
+                                    <li>
+                                        <a href="/MyPlan">
+                                            <GrPlan className=" menu_dash_i" />
+                                            <span className="link_name">My Plan</span>
                                         </a>
-                                    </div>
-                                </li>
-                        </ul>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Contacts">
+                                                <IoIosContact className=" menu_dash_i" />
+                                                <span className="link_name">Contacts</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/inbox">
+                                                <MdOutlineForwardToInbox className=" menu_dash_i" />
+                                                <span className="link_name">Inbox</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Keywords">
+                                                <LuWholeWord className=" menu_dash_i" />
+                                                <span className="link_name">Keywords</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Tempelate">
+                                                <LuLayoutTemplate className=" menu_dash_i" />
+                                                <span className="link_name">Templates</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Settings">
+                                                <GoGear className=" menu_dash_i" />
+                                                <span className="link_name">Settings</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <section className="home-section">
                                 <div className="home-content">
@@ -122,7 +124,7 @@ const PendingMessage = () => {
                                         <div className="SMS_Dashboard_box">
                                             <div className="sms_keywords_warp sms-warp_black">
                                                 <p className='sms_bold'>Pending</p>
-                                                <table className='sms_keywords_table sm_key_table'>
+                                                <div className='sms_keywords_table sm_key_table'>
                                                     <thead>
                                                         <tr>
                                                             <th></th>
@@ -140,27 +142,13 @@ const PendingMessage = () => {
                                                             <td>456</td>
                                                             <td > Show full message preview here</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>X</td>
-                                                            <td>12/22/2025 - 1:34 PM PST</td>
-                                                            <td>EVENT</td>
-                                                            <td>456</td>
-                                                            <td > Show full message preview here</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>X</td>
-                                                            <td>12/22/2025 - 1:34 PM PST</td>
-                                                            <td>EVENT</td>
-                                                            <td>456</td>
-                                                            <td > Show full message preview here</td>
-                                                        </tr>
                                                     </tbody>
-                                                </table>
+                                                </div>
                                                 <p className='text_pending'>IMPORTANT: On initial opt-in, a single, one-time legal message will be sent to each number which subscribes. That message credit will be deducted from your account balance and is required for legal compliance.</p>
                                             </div>
                                             <div className="sms_keywords_warp sms-warp_black">
                                                 <p className='sms_bold'>Sent</p>
-                                                <table className='sms_keywords_table sm_key_table'>
+                                                <div className='sms_keywords_table sm_key_table'>
                                                     <thead>
                                                         <tr>
                                                             <th></th>
@@ -187,13 +175,9 @@ const PendingMessage = () => {
                                                                     </td>
                                                                 </tr>
                                                                 {openStats === data.id && (
-                                                                    <tr>
+                                                                    <tr >
                                                                         <td colSpan="6">
-                                                                            <div  className='stats_summary' style={{
-                                                                                opacity: openStats === data.id ? 1 : 0,
-                                                                                height: openStats === data.id ? 'auto' : 0,
-                                                                                transition: 'opacity 0.01s ease, height 0.3s ease'
-                                                                            }}>
+                                                                            <div className='stats_summary' >
                                                                                 <div className='stats_summary_warp'>
                                                                                     <h3 className='sms_bold'>Summary Stats</h3>
                                                                                     <div className='stats_content'>
@@ -234,47 +218,7 @@ const PendingMessage = () => {
                                                         ))}
 
                                                     </tbody>
-                                                </table>
-                                                {/* {demoDataFromBackend.map((data) => (
-                                                    <div key={data.id} className='stats_summary' style={{
-                                                        opacity: openStats === data.id ? 1 : 0,
-                                                        height: openStats === data.id ? 'auto' : 0,
-                                                        transition: 'opacity 0.01s ease, height 0.3s ease'
-                                                    }}>
-                                                        <div className='stats_summary_warp'>
-                                                            <h3 className='sms_bold'>Summary Stats</h3>
-                                                            <div className='stats_content'>
-                                                                <div className='stats_content-left'>
-                                                                    <p>Total Sent: {data.totalSent}</p>
-                                                                    <p>Delivered: {data.delivered}</p>
-                                                                    <p>Not Delivered: 24 (Click to export Contact list subset)</p>
-                                                                    <p>Replied: 0</p>
-                                                                    <p>Opt-outs: 2</p>
-                                                                    <p>Unknown: 0</p>
-                                                                </div>
-                                                                <div className='stats_content-right'>
-                                                                    <p>Tracing Link (if applicable):</p>
-                                                                    <div>
-                                                                        <p>Message link: https://examplelink.com</p>
-                                                                        <p>Total Clicks: 226</p>
-                                                                        <p>Unique Clicks: 124</p>
-                                                                        <p>Click Through Rate: 18%</p>
-
-                                                                    </div>
-                                                                    <p>Export contacts who clicked</p>
-                                                                </div>
-                                                            </div>
-                                                            <div>
-
-                                                                <button className='bulk_ac_btn' onClick={() => toggleStats(data.id)}>Close</button>
-                                                            </div>
-                                                        </div>
-                                                        <HiXMark className='X_stats' onClick={() => toggleStats(data.id)} />
-
-
-
-                                                    </div>
-                                                ))} */}
+                                                </div>
                                             </div>
 
                                         </div>

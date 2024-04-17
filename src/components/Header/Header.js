@@ -20,7 +20,7 @@ const Header = () => {
         { path: '/', text: 'Home' },
         { path: '/Pricing', text: 'Pricing' },
         { path: '/EventsPage', text: 'EVENTS' },
-        { path: '/Login', text: 'Login', className: 'login-button pc_none' },
+        { path: '/SmsSign', text: 'Login', className: 'login-button pc_none' },
         { path: '/NewEvent', text: 'CREATE EVENT', className: 'li_active' },
     ];
 
@@ -90,7 +90,7 @@ const Header = () => {
                     <li><a href='/' className={addYellowCrrClass('/')}>Home</a></li>
                     <li><a href='/Pricing' className={addYellowCrrClass('/Pricing')}>Pricing</a></li>
                     <li><a href='/SendMessage' className={addYellowCrrClass('/SendMessage')}>SMS Campaigns</a></li>
-                    <li><a href='/Login' className={`login-button pc_none ${addYellowCrrClass('/Login')}`}>Login</a></li>
+                    <li><a href='/SmsSign' className={`login-button pc_none ${addYellowCrrClass('/SmsSign')}`}>Login</a></li>
                     {/* <li><a href='/SendMessage' className={`li_active ${addYellowCrrClass('/SendMessage')}`}>CREATE EVENT</a></li> */}
                 </ul>
             </div>
@@ -113,7 +113,7 @@ const Header = () => {
                 )}
             </div>
 
-            <a href="/Login" className="login-button  res_none" onClick={closeMenu}>Login</a>
+            <a href="/SmsSign" className="login-button  res_none" onClick={closeMenu}>Login</a>
         </nav>
     )
 }

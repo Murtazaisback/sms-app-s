@@ -155,39 +155,29 @@ const Tempelate = () => {
                                         <div className="SMS_Dashboard_box">
                                             <div className="sms_keywords_warp sms-warp_black">
                                                 <p className='sms_bold'>Pending</p>
-                                                <table className='sms_keywords_table sm_key_table'>
-                                                    <thead>
-                                                        <tr>
+                                                <div className='sms_keywords_table sm_key_table'>
+                                                    <div className='Table_head'>
+                                                        <div className='table_row'>
                                                             <th>Keyword</th>
                                                             <th>Template Name</th>
                                                             <th>Message Preview</th>
                                                             <th>Action</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
+                                                        </div>
+                                                    </div>
+                                                    <div className='table_bo'>
                                                         {rows.map(row => (
-                                                            <tr key={row.id}>
-                                                                <td>{row.isEditing ? <input type="text" value={row.event} onChange={(e) => handleInputChange(e, row.id, 'event')} className="editing_in" /> : row.event}</td>
-                                                                <td>{row.isEditing ? <input type="text" value={row.name} onChange={(e) => handleInputChange(e, row.id, 'name')} className="editing_in" /> : row.name}</td>
-                                                                <td>{row.isEditing ? <input type="text" value={row.preview} onChange={(e) => handleInputChange(e, row.id, 'preview')} className="editing_in" /> : row.preview}</td>
+                                                            <div className='table_row' key={row.id}>
+                                                                <td>{row.event}</td>
+                                                                <td>{row.name}</td>
+                                                                <td>{row.preview}</td>
                                                                 <td className='actions_i'>
-                                                                    {row.isEditing ? (
-                                                                        <>
-                                                                            <FaRegListAlt className='action_i' onClick={() => handleSaveEdit(row.id)} />
-                                                                            <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
-                                                                        </>
-                                                                    ) : (
-                                                                        <>
-
-                                                                            <FaRegListAlt className='action_i' onClick={() => handleEditRow(row.id)} />
-                                                                            <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
-                                                                        </>
-                                                                    )}
+                                                                    <a href='/Sendmessage'><FaRegListAlt className='action_i'/> </a>
+                                                                    <FaRegTrashCan className='action_i' onClick={() => handleDeleteRow(row.id)} />
                                                                 </td>
-                                                            </tr>
+                                                            </div>
                                                         ))}
-                                                    </tbody>
-                                                </table>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>

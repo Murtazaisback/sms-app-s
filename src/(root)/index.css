@@ -126,7 +126,7 @@ main {
 
 .btn {
     border-radius: 25px;
-    padding: 9px 9px;
+    padding: 5px 10px;
     text-align: center;
     transition: all ease-in-out 0.25s;
     font-size: 17px;

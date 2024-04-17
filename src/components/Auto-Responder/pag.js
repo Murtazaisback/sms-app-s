@@ -50,17 +50,25 @@ const AutoResponder = ({ title,  }) => {
                 </div>
             </div>
             {showPopup && (
-                <div className="popup_overlay2">
-                    <div className="popup_content3 sms_pop_sm">
-                        <p className='text_center'>Paste your Link here</p>
-                        <form className='Paste_link'>
-                            <input type="text" className="" placeholder='Enter Link' />
-                            <button type="submit" className='btn' onClick={togglePopup} >Submit</button>
-                        </form>
+                 <div className="popup_overlay">
+                 <div className="popup_content2 sms_pop_sm">
+                     <p className='p_content'>Add a Link to Your Message </p>
+                     <form action="" className='Message_sms_pop'>
+                         <div className="inp_sms_pop">
+                             <label htmlFor="">Insert your link below (Note: ALL links must begin with “https”):</label>
+                             <input type="text" />
+                         </div>
+                         <div className="inp_sms_check">
+                             <input type="checkbox" />
+                             <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                         </div>
+                         <div onClick={togglePopup} className='bulk_ac_btn'>Add Link</div>
 
-                        <div onClick={togglePopup} href='' className="close_popup"><HiXMark /></div>
-                    </div>
-                </div>
+                     </form>
+
+                     <div onClick={togglePopup} className="close_popup"><HiXMark /></div>
+                 </div>
+             </div>
             )}
             {showPopup2 && (
                 <div className="popup_overlay2">
@@ -72,7 +80,7 @@ const AutoResponder = ({ title,  }) => {
                                 <option value="" >Your Template</option>
                                 <option value="" >Your Template</option>
                             </select>
-                            <button type="submit" className='btn' onClick={togglePopup2} >Submit</button>
+                            <button type="submit" className='btn' onClick={togglePopup2} >Apply</button>
                         </form>
 
                         <div onClick={togglePopup2} href='' className="close_popup"><HiXMark /></div>

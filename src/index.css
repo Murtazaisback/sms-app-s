@@ -304,9 +304,6 @@
   
   }
   
-  .login-button:hover {
-      color: var(--color-yellow);
-  }
   
   .join-button {
       color: #131418;
@@ -448,7 +445,7 @@
   .btn {
     cursor: pointer;
       border-radius: 25px;
-      padding: 9px 9px;
+      padding: 5px 10px;
       text-align: center;
       transition: all ease-in-out 0.25s;
       font-size: 17px;

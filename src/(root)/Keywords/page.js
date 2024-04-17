@@ -12,7 +12,7 @@ import { BiMessageRoundedError } from "react-icons/bi";
 import { GrPlan } from "react-icons/gr";
 import { IoIosContact } from "react-icons/io";
 import { MdOutlineForwardToInbox } from "react-icons/md";
-import { LuWholeWord, LuBookTemplate } from "react-icons/lu";
+import { LuWholeWord, LuLayoutTemplate } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
 import '../../(root)/SmsCampaigns/index.css'
 
@@ -93,7 +93,7 @@ const Keywords = () => {
                   <li>
                     <div className="iocn-link">
                       <a href="/Tempelate">
-                        <LuBookTemplate className=" menu_dash_i" />
+                        <LuLayoutTemplate className=" menu_dash_i" />
                         <span className="link_name">Templates</span>
                       </a>
                     </div>
@@ -115,7 +115,7 @@ const Keywords = () => {
                     <div className="SMS_Dashboard_box">
                       <div className="sms_keywords_warp">
                         <p className='sms_bold'>My Keywords</p>
-                        <table className='sms_keywords_table'>
+                        <div className='sms_keywords_table'>
                           <thead>
                             <tr className='top_header'>
                               <th></th>
@@ -140,7 +140,7 @@ const Keywords = () => {
                               </td>
                             </tr>
                           </tbody>
-                        </table>
+                        </div>
                         <div>
                           <a onClick={togglePopup} className='bulk_ac_btn'>Add Keyword </a>
 
@@ -158,10 +158,13 @@ const Keywords = () => {
           {showPopup && (
             <div className="popup_overlay2">
               <div className="popup_content3 sms_pop_sm">
-                <p className='text_center'>Paste your Link here</p>
+                <p className='text_center add_keyword_cr'>Add Keyword</p>
                 <form className='Paste_link'>
                   <input type="text" className="" placeholder='e.g. Events24' />
+                  <div className='btn_warp'>
+
                   <button type="submit" className='btn' onClick={togglePopup} >Add</button>
+                  </div>
                 </form>
               </div>
             </div>
