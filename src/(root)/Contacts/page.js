@@ -189,6 +189,12 @@ const Contacts = () => {
                                                             <label htmlFor="">First Last</label>
                                                             <label htmlFor="">09/01/2023</label>
                                                         </div>
+                                                        <div className="selection_body">
+                                                            <input type="checkbox" />
+                                                            <label htmlFor="">+13231111111</label>
+                                                            <label htmlFor="">First Last</label>
+                                                            <label htmlFor="">09/01/2023</label>
+                                                        </div>
 
                                                     </div>
                                                 </div>

@@ -662,7 +662,9 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
-    padding-bottom: 30px;
+    border-bottom: 1px solid gray ;
+    padding-bottom: 5px;
+    /* border-style: dotted; */
 }
 .selection_body input{
     background: transparent !important;
