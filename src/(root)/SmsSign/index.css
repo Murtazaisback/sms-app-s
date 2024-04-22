@@ -65,6 +65,12 @@
     outline: none !important;
     border: none;
 }
+.Sms_input select{
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 15px;
+}
 .check_sms{
     display: flex;
     gap: 20px;

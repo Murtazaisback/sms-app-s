@@ -13,6 +13,7 @@ import { IoIosContact } from "react-icons/io";
 import { MdOutlineForwardToInbox } from "react-icons/md";
 import { LuWholeWord, LuLayoutTemplate } from "react-icons/lu";
 import { GoGear } from "react-icons/go";
+import { HiXMark } from "react-icons/hi2";
 
 const SmsCampaigns = () => {
     const [showPopup, setShowPopup] = useState(true); // Initialize to true
@@ -21,6 +22,7 @@ const SmsCampaigns = () => {
     const [showPopup4, setShowPopup4] = useState(false);
     const [showPopup5, setShowPopup5] = useState(false);
     const [showPopup6, setShowPopup6] = useState(false);
+    const [showPopup9, setShowPopup9] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -48,6 +50,10 @@ const SmsCampaigns = () => {
 
     const togglePopup6 = () => {
         setShowPopup6(!showPopup6);
+    }
+    const togglePopup9 = () => {
+        setShowPopup9(!showPopup9);
+        setShowPopup(false);
     }
 
     return (
@@ -155,9 +161,12 @@ const SmsCampaigns = () => {
                                         </div>
                                         <div className="Sms_btns">
 
-                                            <button type='button' className='sms_button'>Buy Credits</button>
+                                            <button type='button' className='sms_button' onClick={togglePopup9}>Buy Credits</button>
                                             <button type='button' className='sms_button' onClick={togglePopup2}>Upgrade Plan</button>
-                                            <button type='button' className='sms_button_outline'>Send Message</button>
+                                            <div className='submit_text'>
+
+                                            <button type='button' className='form_btn'>Send Message</button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="sms_area_right">
@@ -229,7 +238,7 @@ const SmsCampaigns = () => {
                                     <option value="">No</option>
                                 </select>
                             </div>
-                            <div className='sms_input_box'>
+                            <div className='sms_input_box2'>
 
                                 <input type="checkbox" />
                                 <label htmlFor="">I agree to the Terms of Service</label>
@@ -245,7 +254,7 @@ const SmsCampaigns = () => {
                                 <p className='text_center'>Use my current payment method to pay the set-up fee and pay any recurring fees. You can change this later.</p>
                             </div>
                             <div className='submit_text'>
-                                <button onClick={togglePopup} type='submit' className='form_btn'>submit</button>
+                                <button onClick={togglePopup} type='submit' className='form_btn'>Submit</button>
 
                             </div>
 
@@ -269,7 +278,7 @@ const SmsCampaigns = () => {
                                 <label htmlFor="" className=''>a) If you answered ‘Yes’ to the previous question, do you, under penalty of perjury, claim to have acquired those contacts ethically, legally, and lawfully with the full consent of the recipients?</label> <br />
                                 <button type='button' className='sms_input_btn'>Yes</button>
                             </div>
-                            <div className='sms_input_box'>
+                            <div className='sms_input_box2'>
 
                                 <input type="checkbox" />
                                 <label htmlFor="">I agree to the Terms of Service</label>
@@ -372,6 +381,31 @@ const SmsCampaigns = () => {
 
                 </div>
             )}
+              {showPopup9 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <div className="sms_Credits_box2 sms_box_p">
+                                    <p className='sms_bold'>Purchase One-Time Credit Bundle</p>
+                                    <p>Choose from the options below:</p>
+
+                                    <select name="" id="" className='sms_Credits_input'>
+                                        <option value="" selected>500 Credits - $24.95 One-time</option>
+                                        <option value="" >1000 Credits - $39.95 One-time</option>
+                                        <option value="" >1500 Credits - $54.95 One-time</option>
+                                        <option value="" >2000 Credits - $69.95 One-time</option>
+                                        <option value="" >2500 Credits - $79.95 One-time</option>
+                                        <option value="" >5000 Credits - $129.95 One-time</option>
+                                        <option value="" >10000 Credits - $199.95 One-time</option>
+                                    </select>
+                                    <p>These credits will be added to your existing balance.</p>
+                                    <button type='button' className='sms_button_outline' onClick={togglePopup9}>Buy</button>
+                                </div>
+
+
+                                <div onClick={togglePopup9} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
         </div>
         </RootLayout>
       </>

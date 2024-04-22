@@ -33,6 +33,8 @@ const SendMessageOpt = () => {
     const [showPopup5, setShowPopup5] = useState(false);
     const [showPopup6, setShowPopup6] = useState(false);
     const [showPopup7, setShowPopup7] = useState(false);
+    const [showPopup8, setShowPopup8] = useState(false);
+    const [showPopup9, setShowPopup9] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -59,6 +61,14 @@ const SendMessageOpt = () => {
     const togglePopup7 = () => {
         setShowPopup7(!showPopup7);
         // setShowPopup4(false);
+    }
+    const togglePopup8 = () => {
+        setShowPopup8(!showPopup8);
+        // setShowPopup6(false);
+    }
+    const togglePopup9 = () => {
+        setShowPopup9(!showPopup9);
+        setShowPopup(false);
     }
     return (
         <>
@@ -200,7 +210,7 @@ const SendMessageOpt = () => {
                                                 </div>
                                         <div className="send_messages">
                                             <button className='sms_button'  onClick={togglePopup}>Schedule Message</button>
-                                            <button className='sms_button_outline'>Send Message</button>
+                                            <button className='sms_button_outline' onClick={togglePopup8}>Send Message</button>
                                         </div>
 
                                     </div>
@@ -250,7 +260,7 @@ const SendMessageOpt = () => {
                                 <label htmlFor="">Date</label>
                                 <input type="time" />
                             </div>
-                            <a onClick={togglePopup2}  className='bulk_ac_btn'>Schedule Send</a>
+                            <a onClick={togglePopup9}  className='bulk_ac_btn'>Schedule Send</a>
                         </form>
                         
                         <div onClick={togglePopup} href='' className="close_popup"><HiXMark /></div>
@@ -268,7 +278,7 @@ const SendMessageOpt = () => {
                         </div>
                         <div className="inp_sms_check">
                             <input type="checkbox" />
-                            <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                            <label>Choose this option to use a link shortener to reduce the characters count of your link.</label>
                         </div>
                         <div onClick={togglePopup3}  className='bulk_ac_btn'>Add Link</div>
 
@@ -325,6 +335,50 @@ const SendMessageOpt = () => {
                     </div>
                 </div>
             )}
+             {showPopup8 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <div className="warn">
+
+                                    <p className='warn_p'>Are you sure you want to send this mesaage? This will use <span className="yellow_cr">13 credit</span>  <span>this action is not reversible</span></p>
+                                    <div className="send_messages">
+                                        <button className='sms_button' onClick={togglePopup8}>Cancel</button>
+                                        <button className='sms_button_outline' onClick={togglePopup8}>Confirm Message</button>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div onClick={togglePopup9} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
+                    {showPopup9 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <div className="sms_Credits_box2 sms_box_p">
+                                    <p className='sms_bold'>Purchase One-Time Credit Bundle</p>
+                                    <p>Choose from the options below:</p>
+
+                                    <select name="" id="" className='sms_Credits_input'>
+                                        <option value="" selected>500 Credits - $24.95 One-time</option>
+                                        <option value="" >1000 Credits - $39.95 One-time</option>
+                                        <option value="" >1500 Credits - $54.95 One-time</option>
+                                        <option value="" >2000 Credits - $69.95 One-time</option>
+                                        <option value="" >2500 Credits - $79.95 One-time</option>
+                                        <option value="" >5000 Credits - $129.95 One-time</option>
+                                        <option value="" >10000 Credits - $199.95 One-time</option>
+                                    </select>
+                                    <p>These credits will be added to your existing balance.</p>
+                                    <button type='button' className='sms_button_outline' onClick={togglePopup9}>Update</button>
+                                </div>
+
+
+                                <div onClick={togglePopup9} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
 
 
 
@@ -344,7 +398,7 @@ const SendMessageOpt = () => {
                          </div>
                          <div className="inp_sms_check">
                              <input type="checkbox" />
-                             <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                             <label>Choose this option to use a link shortener to reduce the characters count of your link.</label>
                          </div>
                          <div onClick={togglePopup5} className='bulk_ac_btn'>Add Link</div>
 

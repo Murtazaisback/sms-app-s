@@ -47,8 +47,18 @@ const SmsSign = () => {
                                         <input type='text'required />
                                     </div>
                                     <div className='Sms_input'>
-                                        <label>Business Type</label>
-                                        <input type='text'required />
+                                        <label>Organization Type</label>
+                                        <select>
+                                            <option selected disabled></option>
+                                            <option >LLC</option>
+                                            <option >S-Corp</option>
+                                            <option >C-Corp</option>
+                                            <option >B-Corp</option>
+                                            <option >Sole</option>
+                                            <option >proprietorship</option>
+                                            <option >partnership</option>
+                                            <option >Non-Profit</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className='Sms_inputs'>

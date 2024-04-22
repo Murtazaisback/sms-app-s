@@ -167,7 +167,7 @@ const Contacts = () => {
                                             <div className="sms_box_middle">
                                                 <div className="sms_Credits_box">
                                                     <p className='sms_heading'>Contact List</p>
-                                                    <form className="bulk_ac">
+                                                    <form className="bulk_ac bluk_seles">
                                                         <label htmlFor="">Bulk Action:</label>
                                                         <select name="" id="">
                                                             <option value="" disabled>Select </option>
@@ -184,7 +184,7 @@ const Contacts = () => {
                                                             <label htmlFor="">Date Added</label>
                                                         </div>
                                                         <div className="selection_body">
-                                                            <input type="radio" />
+                                                            <input type="checkbox" />
                                                             <label htmlFor="">+13231111111</label>
                                                             <label htmlFor="">First Last</label>
                                                             <label htmlFor="">09/01/2023</label>
@@ -254,7 +254,7 @@ const Contacts = () => {
                                     </div>
                                     <div className="inp_sms_check">
                                         <input type="checkbox" />
-                                        <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                                        <label>Choose this option to use a link shortener to reduce the characters count of your link. </label>
                                     </div>
                                     <div onClick={togglePopup3} className='bulk_ac_btn'>Add Link</div>
 

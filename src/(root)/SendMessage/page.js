@@ -23,7 +23,7 @@ const SendMessage = () => {
     };
     const insertUnsubscribe = () => {
         setInputValue(inputValue + 'Replay STOP to cancel');
-      };
+    };
 
 
     const [showPopup, setShowPopup] = useState(false); // Initialize to true
@@ -33,6 +33,8 @@ const SendMessage = () => {
     const [showPopup5, setShowPopup5] = useState(false);
     const [showPopup6, setShowPopup6] = useState(false);
     const [showPopup7, setShowPopup7] = useState(false);
+    const [showPopup8, setShowPopup8] = useState(false);
+    const [showPopup9, setShowPopup9] = useState(false);
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
@@ -60,6 +62,14 @@ const SendMessage = () => {
         setShowPopup7(!showPopup7);
         // setShowPopup6(false);
     }
+    const togglePopup8 = () => {
+        setShowPopup8(!showPopup8);
+        // setShowPopup6(false);
+    }
+    const togglePopup9 = () => {
+        setShowPopup9(!showPopup9);
+        setShowPopup(false);
+    }
     return (
         <>
             <RootLayout>
@@ -67,83 +77,83 @@ const SendMessage = () => {
                     <div className="dashboard_main">
                         <div className="dashboard_section">
                             <div className="sidebar ">
-                            <ul className="nav-links">
-                            <Silder_icon />
-                            <li>
-                                <a href="/SmsCampaigns">
-                                <FaRegMessage className=" menu_dash_i" />
+                                <ul className="nav-links">
+                                    <Silder_icon />
+                                    <li>
+                                        <a href="/SmsCampaigns">
+                                            <FaRegMessage className=" menu_dash_i" />
 
-                                    <span className="link_name ">SMS CAMPAIGNS</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/SendMessage">
-                                        <AiOutlineMessage className="yellow_m menu_dash_i" />
+                                            <span className="link_name ">SMS CAMPAIGNS</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/SendMessage">
+                                                <AiOutlineMessage className="yellow_m menu_dash_i" />
 
-                                        <span className="link_name yellow_m">Send Message</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="/AfterMSG">
-                                    <AiOutlineMessage className=" menu_dash_i" />
-                                    <span className="link_name">Send AFM</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/PendingMessage">
-                                    <BiMessageRoundedError className=" menu_dash_i" />
-                                    <span className="link_name ">Pending Messages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/MyPlan">
-                                    <GrPlan className=" menu_dash_i" />
-                                    <span className="link_name">My Plan</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/Contacts">
-                                        <IoIosContact className=" menu_dash_i" />
-                                        <span className="link_name">Contacts</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="iocn-link">
-                                    <a href="/inbox">
-                                        <MdOutlineForwardToInbox  className=" menu_dash_i" />
-                                        <span className="link_name">Inbox</span>
-                                    </a>
-                                </div>
-                            </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Keywords">
-                                            <LuWholeWord className=" menu_dash_i" />
-                                            <span className="link_name">Keywords</span>
+                                                <span className="link_name yellow_m">Send Message</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="/AfterMSG">
+                                            <AiOutlineMessage className=" menu_dash_i" />
+                                            <span className="link_name">Send AFM</span>
                                         </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Tempelate">
-                                            <LuLayoutTemplate className=" menu_dash_i" />
-                                            <span className="link_name">Templates</span>
+                                    </li>
+                                    <li>
+                                        <a href="/PendingMessage">
+                                            <BiMessageRoundedError className=" menu_dash_i" />
+                                            <span className="link_name ">Pending Messages</span>
                                         </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="iocn-link">
-                                        <a href="/Settings">
-                                            <GoGear className=" menu_dash_i" />
-                                            <span className="link_name">Settings</span>
+                                    </li>
+                                    <li>
+                                        <a href="/MyPlan">
+                                            <GrPlan className=" menu_dash_i" />
+                                            <span className="link_name">My Plan</span>
                                         </a>
-                                    </div>
-                                </li>
-                        </ul>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Contacts">
+                                                <IoIosContact className=" menu_dash_i" />
+                                                <span className="link_name">Contacts</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/inbox">
+                                                <MdOutlineForwardToInbox className=" menu_dash_i" />
+                                                <span className="link_name">Inbox</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Keywords">
+                                                <LuWholeWord className=" menu_dash_i" />
+                                                <span className="link_name">Keywords</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Tempelate">
+                                                <LuLayoutTemplate className=" menu_dash_i" />
+                                                <span className="link_name">Templates</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="iocn-link">
+                                            <a href="/Settings">
+                                                <GoGear className=" menu_dash_i" />
+                                                <span className="link_name">Settings</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <section className="home-section">
                                 <div className="home-content">
@@ -201,14 +211,14 @@ const SendMessage = () => {
                                                 </div>
                                                 <div className="send_messages">
                                                     <button className='sms_button' onClick={togglePopup}>Schedule Message</button>
-                                                    <button className='sms_button_outline'>Send Message</button>
+                                                    <button className='sms_button_outline' onClick={togglePopup8}>Send Message</button>
                                                 </div>
 
                                             </div>
                                             <div className="sms_area_right">
                                                 <div className="area_right_btns">
                                                     <div>
-                                                        <button className='sms_button'>Buy Credits</button>
+                                                        <button className='sms_button' onClick={togglePopup9}>Buy Credits</button>
                                                     </div>
                                                     <div>
                                                         <a href='/MyPlan' className='sms_button'>Upgrade Plan</a>
@@ -250,7 +260,7 @@ const SendMessage = () => {
                                         <label htmlFor="">Date</label>
                                         <input type="time" />
                                     </div>
-                                    <a onClick={togglePopup2} className='bulk_ac_btn'>Schedule Send</a>
+                                    <a onClick={togglePopup9} className='bulk_ac_btn'>Schedule Send</a>
                                 </form>
 
                                 <div onClick={togglePopup} href='' className="close_popup"><HiXMark /></div>
@@ -268,7 +278,7 @@ const SendMessage = () => {
                                     </div>
                                     <div className="inp_sms_check">
                                         <input type="checkbox" />
-                                        <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                                        <label>Choose this option to use a link shortener to reduce the characters count of your link. </label>
                                     </div>
                                     <div onClick={togglePopup3} className='bulk_ac_btn'>Add Link</div>
 
@@ -336,44 +346,88 @@ const SendMessage = () => {
 
 
 
-                     {showPopup5 && (
-                 <div className="popup_overlay2">
-                 <div className="popup_content3 sms_pop_sm">
-                     <p className='p_content'>Add a Link to Your Message </p>
-                     <form action="" className='Message_sms_pop'>
-                         <div className="inp_sms_pop">
-                             <label htmlFor="">Insert your link below (Note: ALL links must begin with “https”):</label>
-                             <input type="text" />
-                         </div>
-                         <div className="inp_sms_check">
-                             <input type="checkbox" />
-                             <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
-                         </div>
-                         <div onClick={togglePopup5} className='bulk_ac_btn'>Add Link</div>
+                    {showPopup5 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <p className='p_content'>Add a Link to Your Message </p>
+                                <form action="" className='Message_sms_pop'>
+                                    <div className="inp_sms_pop">
+                                        <label htmlFor="">Insert your link below (Note: ALL links must begin with “https”):</label>
+                                        <input type="text" />
+                                    </div>
+                                    <div className="inp_sms_check">
+                                        <input type="checkbox" />
+                                        <label>Choose this option to use a link shortener to reduce the characters count of your link.</label>
+                                    </div>
+                                    <div onClick={togglePopup5} className='bulk_ac_btn'>Add Link</div>
 
-                     </form>
+                                </form>
 
-                     <div onClick={togglePopup5} className="close_popup"><HiXMark /></div>
-                 </div>
-             </div>
-            )}
-            {showPopup6 && (
-                <div className="popup_overlay2">
-                    <div className="popup_content3 sms_pop_sm">
-                        <p className='text_center'>Add a Link to Your Message</p>
-                        <form className='Paste_link'>
-                            <select>
-                                <option value="" selected disabled>Select Your Template</option>
-                                <option value="" >Your Template</option>
-                                <option value="" >Your Template</option>
-                            </select>
-                            <button type="submit" className='btn' onClick={togglePopup6} >Apply</button>
-                        </form>
+                                <div onClick={togglePopup5} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
+                    {showPopup8 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <div className="warn">
 
-                        <div onClick={togglePopup6} href='' className="close_popup"><HiXMark /></div>
-                    </div>
-                </div>
-            )}
+                                    <p className='warn_p'>Are you sure you want to send this mesaage? This will use <span className="yellow_cr">13 credit</span>  <span>this action is not reversible</span></p>
+                                    <div className="send_messages">
+                                        <button className='sms_button' onClick={togglePopup8}>Cancel</button>
+                                        <button className='sms_button_outline' onClick={togglePopup8}>Confirm Message</button>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div onClick={togglePopup8} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
+                    {showPopup9 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <div className="sms_Credits_box2 sms_box_p">
+                                    <p className='sms_bold'>Purchase One-Time Credit Bundle</p>
+                                    <p>Choose from the options below:</p>
+
+                                    <select name="" id="" className='sms_Credits_input'>
+                                        <option value="" selected>500 Credits - $24.95 One-time</option>
+                                        <option value="" >1000 Credits - $39.95 One-time</option>
+                                        <option value="" >1500 Credits - $54.95 One-time</option>
+                                        <option value="" >2000 Credits - $69.95 One-time</option>
+                                        <option value="" >2500 Credits - $79.95 One-time</option>
+                                        <option value="" >5000 Credits - $129.95 One-time</option>
+                                        <option value="" >10000 Credits - $199.95 One-time</option>
+                                    </select>
+                                    <p>These credits will be added to your existing balance.</p>
+                                    <button type='button' className='sms_button_outline' onClick={togglePopup9}>Update</button>
+                                </div>
+
+
+                                <div onClick={togglePopup9} className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
+                    {showPopup6 && (
+                        <div className="popup_overlay2">
+                            <div className="popup_content3 sms_pop_sm">
+                                <p className='text_center'>Add a Link to Your Message</p>
+                                <form className='Paste_link'>
+                                    <select>
+                                        <option value="" selected disabled>Select Your Template</option>
+                                        <option value="" >Your Template</option>
+                                        <option value="" >Your Template</option>
+                                    </select>
+                                    <button type="submit" className='btn' onClick={togglePopup6} >Apply</button>
+                                </form>
+
+                                <div onClick={togglePopup6} href='' className="close_popup"><HiXMark /></div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </RootLayout>
 

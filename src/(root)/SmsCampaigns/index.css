@@ -48,7 +48,23 @@
     gap: 25px;
     padding: 20px;
 }
+.sms_Credits_box2 {
+    width: 100%;
+    border-radius: 15px;
+    /* background: #212121; */
+    /* box-shadow: 2px 4px 4px 0px #63636367 inset, -2px -2px 4px 0px #63636367 inset; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
 
+.bluk_seles select{
+    width: 150px;
+    text-align: center;
+}
 .progressBar_warp {
     width: 100%;
     position: relative;
@@ -274,6 +290,12 @@
 .sms_input_box {
     margin-left: 20px;
 }
+.sms_input_box2  {
+    margin-left: 20px;
+}
+.sms_input_box2 input{
+    margin-right: 10px;
+}
 
 .sms_input_btn {
     padding: 10px 20px;
@@ -302,18 +324,27 @@
 .submit_text button {
     padding: 10px 20px;
     background: var(--color-yellow2);
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     color: black;
     border-radius: 25px;
     cursor: pointer;
     transition: all ease-in-out 0.2s;
 }
 .submit_text button:hover{
-    border: 2px solid #cbb26a;
+    border: 1px solid #cbb26a;
     background: transparent;
     color: white;
 }
-
+.warn{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.warn_p{
+    /* display: inline; */
+    text-align: center;
+}
 .sms_Credits_input {
     width: 100%;
     text-align: center;
@@ -416,8 +447,9 @@
     height: 50%;
     min-height: 50px ;
     max-height: 250px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     resize: none;
+    /* scrollbar-width: none; */
 }
 
 .sms_pay {
@@ -925,7 +957,9 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     justify-content: space-between;
     text-align: center;
     /* gap: 75px; */
-
+}
+.table_row p{
+    width: 150px;
 }
 .table_row th{
     width: 150px;
@@ -941,8 +975,12 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     width: 150px;
 }
 .table_row td:nth-child(3){
-    width: 200px;
+    width: 230px;
 }
+.table_row p:nth-child(3){
+    width: 230px;
+}
+
 
 
 @media screen and (max-width: 860px) {

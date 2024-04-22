@@ -151,17 +151,17 @@ const Tempelate = () => {
                             <section className="home-section">
                                 <div className="home-content">
                                     <div className="SMS_Dashboard_warp">
-                                        <h3>SMS Campaigns: Pending/Sent Messages</h3>
+                                        <h3>SMS Campaigns: Templates</h3>
                                         <div className="SMS_Dashboard_box">
                                             <div className="sms_keywords_warp sms-warp_black">
-                                                <p className='sms_bold'>Pending</p>
+                                                <p className='sms_bold'>Templates</p>
                                                 <div className='sms_keywords_table sm_key_table'>
                                                     <div className='Table_head'>
                                                         <div className='table_row'>
-                                                            <th>Keyword</th>
-                                                            <th>Template Name</th>
-                                                            <th>Message Preview</th>
-                                                            <th>Action</th>
+                                                            <p>Keyword</p>
+                                                            <p>Template Name</p>
+                                                            <p>Message Preview</p>
+                                                            <p>Action</p>
                                                         </div>
                                                     </div>
                                                     <div className='table_bo'>

@@ -60,7 +60,7 @@ const AutoResponder = ({ title,  }) => {
                          </div>
                          <div className="inp_sms_check">
                              <input type="checkbox" />
-                             <label>Choose this option to use a link shortener to reduce the character count ithat your link uses up. </label>
+                             <label>Choose this option to use a link shortener to reduce the characters count of your link.</label>
                          </div>
                          <div onClick={togglePopup} className='bulk_ac_btn'>Add Link</div>
 
