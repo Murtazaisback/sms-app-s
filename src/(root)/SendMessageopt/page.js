@@ -219,9 +219,9 @@ const SendMessageOpt = () => {
                                             <div>
                                                 <button className='sms_button'>Buy Credits</button>
                                             </div>
-                                            <div>
+                                            {/* <div> */}
                                                 <a href='/Myplan' className='sms_button'>Upgrade Plan</a>
-                                            </div>
+                                            {/* </div> */}
                                         </div>
                                         <div className="prev_message">
                                             <h3>Message Preview</h3>

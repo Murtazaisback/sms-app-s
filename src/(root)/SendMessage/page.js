@@ -220,9 +220,9 @@ const SendMessage = () => {
                                                     <div>
                                                         <button className='sms_button' onClick={togglePopup9}>Buy Credits</button>
                                                     </div>
-                                                    <div>
+                                                    {/* <div> */}
                                                         <a href='/MyPlan' className='sms_button'>Upgrade Plan</a>
-                                                    </div>
+                                                    {/* </div> */}
                                                 </div>
                                                 <div className="prev_message">
                                                     <h3>Message Preview</h3>

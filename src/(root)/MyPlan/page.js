@@ -104,7 +104,7 @@ const MyPlan = () => {
                                         <h3>SMS Campaigns: My Plan</h3>
                                         <div className="SMS_Dashboard_box">
                                             <div className="sms_area_top">
-                                                <div className="sms_Credits_box">
+                                                <div className="sms_Credits_box sms_Credits_box_p0">
                                                     <p className='sms_bold'>My Plan</p>
                                                     <p>[Display Plan Here]</p>
                                                     <p className='sms_bold'>Change Plan</p>
@@ -124,7 +124,7 @@ const MyPlan = () => {
 
                                             </div>
                                             <div className="sms_area_bottom">
-                                                <div className="sms_Credits_box sms_box_p">
+                                                <div className="sms_Credits_box sms_box_p sms_Credits_box_p0">
                                                     <p className='sms_bold'>Purchase One-Time Credit Bundle</p>
                                                     <p>Choose from the options below:</p>
 
@@ -140,7 +140,7 @@ const MyPlan = () => {
                                                     <p>These credits will be added to your existing balance.</p>
                                                     <button type='button' className='sms_button_outline'>Update</button>
                                                 </div>
-                                                <div className="sms_Credits_box">
+                                                <div className="sms_Credits_box ">
                                                     <p className='sms_bold'>Payment Method</p>
 
                                                     <div className="sms_pay">

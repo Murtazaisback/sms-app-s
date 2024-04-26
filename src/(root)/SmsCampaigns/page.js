@@ -163,10 +163,10 @@ const SmsCampaigns = () => {
 
                                             <button type='button' className='sms_button' onClick={togglePopup9}>Buy Credits</button>
                                             <button type='button' className='sms_button' onClick={togglePopup2}>Upgrade Plan</button>
-                                            <div className='submit_text'>
-
                                             <button type='button' className='form_btn'>Send Message</button>
-                                            </div>
+                                            {/* <div className='submit_text'> */}
+
+                                            {/* </div> */}
                                         </div>
                                     </div>
                                     <div className="sms_area_right">

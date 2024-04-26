@@ -106,6 +106,7 @@
     border-radius: 25px;
     font-size: 15px;
     cursor: pointer;
+    text-align: center;
 }
 
 .Sms_btns {
@@ -321,7 +322,7 @@
 
 }
 
-.submit_text button {
+.form_btn {
     padding: 10px 20px;
     background: var(--color-yellow2);
     border: 1px solid transparent;
@@ -330,7 +331,7 @@
     cursor: pointer;
     transition: all ease-in-out 0.2s;
 }
-.submit_text button:hover{
+.form_btn:hover{
     border: 1px solid #cbb26a;
     background: transparent;
     color: white;
@@ -853,6 +854,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     justify-content: space-between;
     height: 100%;
     margin-bottom: 10px;
+    gap: 20px;
 }
 .send_inp{
     display: flex;
@@ -986,6 +988,22 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
 
 
 @media screen and (max-width: 860px) {
+    .popup_content3 {
+        width: 85% !important;
+    }
+    .popup_overlay2 {
+        padding-top: 50px;
+    }
+    .sms_left_righ{
+        width: 100%;
+    }
+    .area_right_btns{
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    .SMS_Dashboard_warp{
+        width: 130%;
+    }
     .popup_overlay{
         top: 0;
     }
@@ -1008,6 +1026,10 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     }
     .sms_Credits_box{
         width: 500px;
+    }
+    .sms_Credits_box_p0{
+        width: 100% !important;
+        padding: 15px;
     }
     .label_sms_b input, .label_sms_b select{
         font-size: 12px;
@@ -1032,6 +1054,8 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     }
     .SMS_Dashboard_box_one{
         flex-wrap: wrap;
+        width: 190%;
+        gap: 20px;
     }
     .SMS_Dashboard_box {
         /* flex-wrap: wrap; */
@@ -1044,6 +1068,8 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
         padding: 2px;
     }
     .Sms_btns{
+        /* flex-direction: column; */
+        /* width: 500px; */
         gap: 20px;
     }
     .sms_button{
