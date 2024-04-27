@@ -217,9 +217,9 @@ const SendMessage = () => {
                                             </div>
                                             <div className="sms_area_right">
                                                 <div className="area_right_btns">
-                                                    <div>
-                                                        <button className='sms_button' onClick={togglePopup9}>Buy Credits</button>
-                                                    </div>
+                                                    {/* <div> */}
+                                                        <div className='sms_button' onClick={togglePopup9}>Buy Credits</div>
+                                                    {/* </div> */}
                                                     {/* <div> */}
                                                         <a href='/MyPlan' className='sms_button'>Upgrade Plan</a>
                                                     {/* </div> */}
