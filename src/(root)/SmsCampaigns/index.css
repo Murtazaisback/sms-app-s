@@ -22,6 +22,12 @@
     margin-top: 20px;
 
 }
+.sms_area_left_p{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    gap: 20px;
+}
 .sms_area_left{
     display: flex;
     width: 65%;
@@ -988,6 +994,20 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
 
 
 @media screen and (max-width: 860px) {
+    .contact_sms_img{
+        width: 200px;
+    }
+    .select_opt {
+        font-size: 11px;
+    }
+    .bulk_ac{
+        width: 100%;
+        gap: 5px;
+    }
+    .contact_text_sms{
+        font-size: 14px;
+    }
+    
     .popup_content3 {
         width: 85% !important;
     }
@@ -1002,7 +1022,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
         margin-bottom: 10px;
     }
     .SMS_Dashboard_warp{
-        width: 130%;
+        width: 100%;
     }
     .popup_overlay{
         top: 0;
@@ -1025,7 +1045,8 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
         padding: 20px;
     }
     .sms_Credits_box{
-        width: 500px;
+        width: 100%;
+        padding: 20px 10px;
     }
     .sms_Credits_box_p0{
         width: 100% !important;
@@ -1062,7 +1083,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
         flex-direction: column;
     }
     .sms_area_right{
-        width: 100%;
+        width: 65%;
     }
     .yellowBg{
         padding: 2px;
@@ -1075,8 +1096,11 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     .sms_button{
         width: 100%;
     }
-    .sms_area_left{
+    .sms_area_left_p{
         width: 100%;
+    }
+    .sms_area_left{
+        /* width: 100%; */
     }
     .sms_button_outline{
         width: 100%;

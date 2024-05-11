@@ -5490,7 +5490,7 @@
   
       /* ----------------------------main---------------------- */
       .main_container {
-          width: 90%;
+          width: 95%;
           /* width: 89%; */
       }
   
@@ -5598,13 +5598,14 @@
   
       .sidebar.close {
           width: 70px;
+          padding: 5px;
       }
   
       .sidebar.close~.home-section {
   
           width: 100%;
           overflow-y: scroll;
-          padding: 10px;
+          padding: 3px;
           background: black;
       }
   
@@ -6070,7 +6071,7 @@
       }
   
       .home-section .home-content {
-          padding: 15px;
+          padding: 10px;
           overflow-x: scroll;
       }
   

@@ -111,7 +111,7 @@ const Inbox = () => {
                             <div className="SMS_Dashboard_warp">
                                 <h3>SMS Campaigns Dashboard</h3>
                                 <div className="SMS_Dashboard_box_one">
-                                    <div className="sms_area_left">
+                                    <div className="sms_area_left_p">
                                         <div className="sms_left_warp">
                                             <div className="sms_left_head">Message Preview</div>
                                             <div className="inbox_header">
