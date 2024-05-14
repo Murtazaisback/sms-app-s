@@ -994,7 +994,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
 
 
 @media screen and (max-width: 860px) {
-    .contact_sms_img{
+    .contact_sms_img img{
         width: 200px;
     }
     .select_opt {
@@ -1075,7 +1075,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     }
     .SMS_Dashboard_box_one{
         flex-wrap: wrap;
-        width: 190%;
+        width: 155%;
         gap: 20px;
     }
     .SMS_Dashboard_box {
