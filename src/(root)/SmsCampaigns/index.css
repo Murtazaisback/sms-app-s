@@ -1010,6 +1010,7 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     
     .popup_content3 {
         width: 85% !important;
+        margin-top: 30%;
     }
     .popup_overlay2 {
         padding-top: 50px;
@@ -1028,7 +1029,8 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
         top: 0;
     }
     .popup_content{
-        height: fit-content;
+        /* height: fit-content; */
+        height: 65vh;
     }
     .stats_content{
         flex-direction: column;
