@@ -144,7 +144,11 @@ const SmsCampaigns = () => {
                     <section className="home-section">
                         <div className="home-content">
                             <div className="SMS_Dashboard_warp">
+                                <div className='sms_set_warp'>
+
                                 <h3>SMS Campaigns Dashboard</h3>
+                                <button onClick={togglePopup2} className='form_btn Wizard_btn'>Setup Wizard</button>
+                                </div>
                                 <div className="SMS_Dashboard_box_one">
 
                                     <div className="sms_area_left">
@@ -162,8 +166,8 @@ const SmsCampaigns = () => {
                                         <div className="Sms_btns">
 
                                             <button type='button' className='sms_button' onClick={togglePopup9}>Buy Credits</button>
-                                            <button type='button' className='sms_button' onClick={togglePopup2}>Upgrade Plan</button>
-                                            <button type='button' className='form_btn'>Send Message</button>
+                                            <a type='button' className='sms_button' href='/myplan'>Upgrade Plan</a>
+                                            <a type='button' className='form_btn' href='sendmessage'>Send Message</a>
                                             {/* <div className='submit_text'> */}
 
                                             {/* </div> */}
@@ -295,7 +299,7 @@ const SmsCampaigns = () => {
                                 <label htmlFor="">Use my current payment method to pay the set-up fee and pay any recurring fees. You can change this later.</label>
                             </div>
                             <div className='submit_text'>
-                                <button onClick={togglePopup3} type='submit'>submit</button>
+                                <button onClick={togglePopup3} type='submit' className='form_btn'>submit</button>
 
                             </div>
 

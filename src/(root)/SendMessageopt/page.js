@@ -65,6 +65,9 @@ const SendMessageOpt = () => {
     const togglePopup8 = () => {
         setShowPopup8(!showPopup8);
         // setShowPopup6(false);
+        setShowPopup(false);
+        setShowPopup2(false);
+        setShowPopup9(false);
     }
     const togglePopup9 = () => {
         setShowPopup9(!showPopup9);
@@ -215,14 +218,14 @@ const SendMessageOpt = () => {
 
                                     </div>
                                     <div className="sms_area_right">
-                                        <div className="area_right_btns">
-                                            <div>
-                                                <button className='sms_button'>Buy Credits</button>
-                                            </div>
-                                            {/* <div> */}
-                                                <a href='/Myplan' className='sms_button'>Upgrade Plan</a>
-                                            {/* </div> */}
-                                        </div>
+                                    <div className="area_right_btns">
+                                                    {/* <div> */}
+                                                        <div className='sms_button' onClick={togglePopup9}>Buy Credits</div>
+                                                    {/* </div> */}
+                                                    {/* <div> */}
+                                                        <a href='/MyPlan' className='sms_button'>Upgrade Plan</a>
+                                                    {/* </div> */}
+                                                </div>
                                         <div className="prev_message">
                                             <h3>Message Preview</h3>
                                             <div className="prev_message_box">
@@ -260,7 +263,7 @@ const SendMessageOpt = () => {
                                 <label htmlFor="">Date</label>
                                 <input type="time" />
                             </div>
-                            <a onClick={togglePopup9}  className='bulk_ac_btn'>Schedule Send</a>
+                            <a onClick={togglePopup8}  className='bulk_ac_btn'>Schedule Send</a>
                         </form>
                         
                         <div onClick={togglePopup} href='' className="close_popup"><HiXMark /></div>
@@ -350,7 +353,7 @@ const SendMessageOpt = () => {
                                 </div>
 
 
-                                <div onClick={togglePopup9} className="close_popup"><HiXMark /></div>
+                                <div onClick={togglePopup8} className="close_popup"><HiXMark /></div>
                             </div>
                         </div>
                     )}
@@ -371,7 +374,7 @@ const SendMessageOpt = () => {
                                         <option value="" >10000 Credits - $199.95 One-time</option>
                                     </select>
                                     <p>These credits will be added to your existing balance.</p>
-                                    <button type='button' className='sms_button_outline' onClick={togglePopup9}>Update</button>
+                                    <button type='button' className='sms_button_outline' onClick={togglePopup8}>Update</button>
                                 </div>
 
 

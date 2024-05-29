@@ -1,5 +1,6 @@
 .SMS_Dashboard_warp {
     width: 100%;
+    position: relative;
 }
 
 .SMS_Dashboard_box {
@@ -1024,6 +1025,10 @@ box-shadow: 2px 4px 4px 0px #636363 inset, -2px -2px 4px 0px #636363 inset;
     }
     .SMS_Dashboard_warp{
         width: 100%;
+    }
+    .popup_content2 {
+        width: 95%;
+        margin-top: 50px;
     }
     .popup_overlay{
         top: 0;

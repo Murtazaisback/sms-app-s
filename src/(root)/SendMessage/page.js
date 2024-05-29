@@ -45,7 +45,9 @@ const SendMessage = () => {
     }
     const togglePopup3 = () => {
         setShowPopup3(!showPopup3);
+        setShowPopup(false);
         setShowPopup2(false);
+        setShowPopup9(false);
     }
     const togglePopup4 = () => {
         setShowPopup4(!showPopup4);
@@ -65,6 +67,9 @@ const SendMessage = () => {
     const togglePopup8 = () => {
         setShowPopup8(!showPopup8);
         // setShowPopup6(false);
+        setShowPopup(false);
+        setShowPopup2(false);
+        setShowPopup9(false);
     }
     const togglePopup9 = () => {
         setShowPopup9(!showPopup9);
@@ -260,7 +265,7 @@ const SendMessage = () => {
                                         <label htmlFor="">Date</label>
                                         <input type="time" />
                                     </div>
-                                    <a onClick={togglePopup9} className='bulk_ac_btn'>Schedule Send</a>
+                                    <a onClick={togglePopup8} className='bulk_ac_btn'>Schedule Send</a>
                                 </form>
 
                                 <div onClick={togglePopup} href='' className="close_popup"><HiXMark /></div>
@@ -294,7 +299,7 @@ const SendMessage = () => {
                                 <p className='p_content'>Please confirm that you want to send this message.</p>
                                 <div className="pop_text_cent">
 
-                                    <p>Note: This will use { } of your total remaining credits.</p>
+                                    <p>Note: This will use "32" of your total remaining credits.</p>
 
                                     <div onClick={togglePopup4} className='bulk_ac_btn'>Send</div>
                                 </div>
@@ -403,7 +408,7 @@ const SendMessage = () => {
                                         <option value="" >10000 Credits - $199.95 One-time</option>
                                     </select>
                                     <p>These credits will be added to your existing balance.</p>
-                                    <button type='button' className='sms_button_outline' onClick={togglePopup9}>Update</button>
+                                    <button type='button' className='sms_button_outline' onClick={togglePopup8}>Update</button>
                                 </div>
 
 
